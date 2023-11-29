@@ -24,9 +24,16 @@ ubuntu@sep2023:~$ mkfs -t ext4 /dev/sda6                                        
 #### Mount partition
 Mounting a Linux partition is the process of attaching the partition to a specific directory in the file system, enabling the operating system/users to access and use the data stored on that partition.
 
-**Syntax:** mount `<partition>` `<mount point>`
+**Syntax 1:** mount `<partition>` `<mount point>`                                                ## Temporary Mount
 ```
 ubuntu@sep2023:~$ mkdir /myfirstpart                                                             ## Create a directory(Mount point)
 ubuntu@sep2023:~$ mount /dev/sda6 /myfirstpart                                                   ## Mount partition to the targeted directory. umount comman can be used to unmount it
 ubuntu@sep2023:~$ df -h                                                                          ## To list all mounted filesystems
+```
+**Syntax 2:** <device>  <mount point>  <filesystem> <options> <dump> <fsck>                      ## Permanent Mount, which will persist after rebbot
+```
+ubuntu@sep2023:~$ sudo vim  /etc/fstab
+/dev/sda6 /myfirstpart ext4 defaults  0 0                                                        ## Write and quit from vim editor
+ubuntu@sep2023:~$ sudo mount -a                                                                  ## Mount all devices in the fstab
+ubuntu@sep2023:~$ df -h
 ```
