@@ -2,7 +2,7 @@
 A logical volume in Linux is a virtualized storage entity created by combining multiple physical or logical partitions, providing a flexible and resizable storage space that can be managed dynamically to meet changing storage requirements.
 
 #### The hierarchy to logical volume
-Physical Partition(with Linux LVM Type) **->** Physical Volume(pv) **-?>** Volume Group(vg) **->** Logical Volume(lv)
+Physical Partition(with Linux LVM Type) **->** Physical Volume(pv) **->** Volume Group(vg) **->** Logical Volume(lv)
 
 #### Step 1 - Create a disk partition
 **Syntax :** fdisk `</dev/sda>`
@@ -18,3 +18,10 @@ Partition type  or alias (L to list all): 30                                    
 Command (m for help): w                                                                           ## Write the changes
 ubuntu@sep2023:~$
 ```
+#### Step 2 - Convert to physical volume
+**Syntax:**  pvcreate <partition>                                                                 ## The absolute path of the partition
+```
+ubuntu@sep2023:~$ sudo pvs                                                                        ## List physical volumes (pv display is an alternative)
+ubuntu@sep2023:~$ sudo pvcreate /dev/sda6
+```
+#### Step 3 - Cretae Volume group
