@@ -19,7 +19,7 @@ Command (m for help): w                                                         
 ubuntu@sep2023:~$
 ```
 #### Step 2 - Convert to physical volume
-**Syntax:**  pvcreate <partition>                                                                 ## The absolute path of the partition
+**Syntax:**  pvcreate `<partition>`                                                               ## The absolute path of the partition
 ```
 ubuntu@sep2023:~$ sudo pvs                                                                        ## List physical volumes (pv display is an alternative)
 ubuntu@sep2023:~$ sudo pvcreate /dev/sda6
