@@ -23,5 +23,35 @@ ubuntu@sep2023:~$
 ```
 ubuntu@sep2023:~$ sudo pvs                                                                        ## List physical volumes (pv display is an alternative)
 ubuntu@sep2023:~$ sudo pvcreate /dev/sda6
+ubuntu@sep2023:~$ sudo pvs
 ```
 #### Step 3 - Cretae Volume group
+**Syntax:**  vgcreate `<vg name>` `<physical volume>`
+```
+ubuntu@sep2023:~$ sudo vgs
+ubuntu@sep2023:~$ sudo vgcreate orange-vg /dev/sda6
+ubuntu@sep2023:~$ sudo vgs
+```
+#### Step 3 - Cretae Logical Volume (LVM)
+**Syntax:**  lvcreate -L `+<size>` -n `<lv name>` `<vg name>`
+```
+ubuntu@sep2023:~$ sudo lvs
+ubuntu@sep2023:~$ sudo lvcreate apple-lvm /dev/sda6
+ubuntu@sep2023:~$ sudo lvs
+```
+#### Step 4 - Format logical volume
+**Syntax:** mkfs -t `<FileSystem>` `<lvm name>`                                                 ## Choose appropriate FileSystem
+```
+ubuntu@sep2023:~$ sudo mkfs -t ext4 /dev/orange-vg/apple-lvm
+```
+#### Step 5 - Mount logical volume
+**Syntax:** `<absolute lvm path OR UUID>`  `<mountpoint>`  `<filesystem>` `<options>` `<enable/disable dump>` `<enable/disable fsck>` ## Permanent Mount, which will persist after rebbot
+```
+ubuntu@sep2023:~$ sudo mkdir -p /orange/custom_lvm/apple                                         ## Create a mount point(directory)
+ubuntu@sep2023:~$ sudo vim  /etc/fstab
+/dev/orange-vg/apple-lvm /orange/custom_lvm/apple ext4 defaults  0 0                             ## Write and quit(:wq) from vim editor
+ubuntu@sep2023:~$ sudo mount -a                                                                  ## Mount all devices in the fstab
+ubuntu@sep2023:~$ df -h
+```
+
+**_Note:_** vgextend and lvextend are the commands if you want to extend the size of each.
