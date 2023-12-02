@@ -2,21 +2,14 @@
 User and group administration in Linux involves managing user accounts, groups, and their associated permissions.
 
 #### Key Files and Directories:
-**/etc/passwd:**
-
-- Contains user account information.
-
-**/etc/shadow:**
-  
-- Stores encrypted user passwords.
-
-**/etc/group:**
-  
-- Contains group information.
-
-**/etc/sudoers:**
-  
-- Configures sudo access.
+- **/etc/passwd:**
+  - Contains user account information.
+- **/etc/shadow:**
+  - Stores encrypted user passwords.
+- **/etc/group:**
+  - Contains group information.
+- **/etc/sudoers:**
+  - Configures sudo access.
 
 **_Here are key commands and concepts for user and group administration:_**
 
