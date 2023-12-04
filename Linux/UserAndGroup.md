@@ -81,6 +81,7 @@ root@sep2023:~#groupdel orange
 #### Permissions and Ownership:
 **Changing Ownership:**
 - Changes the owner and group of a file or directory
+- chgrp command can be used for change group specific ownership
 ```
 root@sep2023:~#mkdir -p /orange/red
 root@sep2023:~#touch /orange/red/helloworld.txt
