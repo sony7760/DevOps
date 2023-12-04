@@ -6,6 +6,7 @@ User and group administration in Linux involves managing user accounts, groups, 
   - Contains user account information.
 - **/etc/shadow:**
   - Stores encrypted user passwords.
+  - Stores account/password aging informations.
 - **/etc/group:**
   - Contains group information.
 - **/etc/sudoers:**
