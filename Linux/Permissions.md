@@ -1,5 +1,5 @@
 ## File Permissions
-File permissions in Linux determine who can access a file or directory and what actions they can perform. Permissions are set for three categories of users: the file owner, the group owner, and others (everyone else, it might be users/groups). There are three types of actions that can be allowed or denied: reading, writing, and executing.
+File permissions in Linux determine who can access a file or directory and what actions they can perform. Permissions are set for three categories of users: the file owner(u), the group owner(g), and others(o) (everyone else, it might be users/groups). There are three types of actions that can be allowed or denied: reading, writing, and executing.
 
 ### Types of Permissions:
 **Read (r):**
