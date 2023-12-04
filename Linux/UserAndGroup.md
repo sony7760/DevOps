@@ -68,7 +68,7 @@ root@sep2023:~#groupadd orange                                         ## Create
 ```
 **Adding a User to a Group:**
 ```
-root@sep2023:~#usermod -aG orange ubuntu                               ## Set ubuntu's secondar group as orange
+root@sep2023:~#usermod -aG orange ubuntu                               ## Set ubuntu's secondary group as orange
 ```
 **Changing a User's Primary Group:**
 ```
