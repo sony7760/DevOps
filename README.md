@@ -1,6 +1,8 @@
 ## DevOps
 DevOps is a set of practices, principles, and cultural philosophies aimed at improving collaboration and communication between development (Dev) and operations (Ops) teams in software development. The primary goal of DevOps is to streamline the software delivery process, making it more efficient, reliable, and capable of quickly adapting to changes.
 
+![](Linux/images/DevopsCycle.jpeg)
+
 **Collaboration:**
 
 DevOps emphasizes strong collaboration between development and operations teams. This means breaking down silos and fostering a culture of shared responsibility for the entire software development lifecycle.
