@@ -12,6 +12,9 @@ _**Reference:**_ https://www.javatpoint.com/fork-vs-exec
 ### Process Identification:
 - **Process ID (PID):**
   - Each process is identified by a unique numerical identifier called the Process ID (PID).
+    ```
+    root@node1~#pidof apache2
+    ```
 - **Parent Process ID (PPID):**
   - The PPID is the PID of the parent process that spawned the current process.
 ### Viewing Processes:
@@ -30,11 +33,20 @@ _**Reference:**_ https://www.javatpoint.com/fork-vs-exec
 - **`kill` Command:**
   - Sends signals to processes.
   - Example: `kill -9 PID` sends a `SIGKILL` signal to terminate a process.
+    ```
+    root@node1~#kill -9 1734
+    ```
 ### Background and Foreground Execution:
 - **Background Execution:**
   - Adding `&` at the end of a command runs it in the background.
+    ```
+    root@node1~#sleep 60&
+    ```
 - **Foreground Execution:**
   - Processes running in the foreground interact with the user and can receive signals like Ctrl+C for termination.
+    ```
+    root@node1~#sleep 60
+    ```
 ### Process States:
 - **Running (R), Sleeping (S), Stopped (T), Zombie (Z):**
   - Processes go through various states during their lifecycle.
