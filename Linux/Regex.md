@@ -15,4 +15,4 @@
   - **`[^0-9]`**                                        ## Matches any non-digit
 - **Anchors:**
   - **`^pattern`**                                      ## Matches lines that start with the pattern
-  - 
+  - **`pattern$`**                                      ## Matches lines that end with the pattern
