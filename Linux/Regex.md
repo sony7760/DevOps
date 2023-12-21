@@ -16,3 +16,28 @@
 - **Anchors:**
   - **`^pattern`**                                      ## Matches lines that start with the pattern
   - **`pattern$`**                                      ## Matches lines that end with the pattern
+- **Quantifiers:**
+  - **`a*`**                                            ## Matches 'a', 'aa', 'aaa', etc
+  - **`a+`**                                            ## Matches 'a', 'aa', 'aaa', etc., but not an empty string
+  - **`a?`**                                            ## Matches 'a' or an empty string
+- **Escape Characters:**
+  - **\.**                                              ## Matches a literal period
+
+#### Utilities Using Regular Expressions
+- **grep:**
+  - Searches for patterns in files
+  - Example: **`grep 'pattern' file.txt`**
+- **sed:**
+  - Stream editor for filtering and transforming text
+  - Example: **`sed 's/old/new/' file.txt`**
+- **awk:**
+  - Text processing tool with powerful pattern matching
+  - Example: **`awk '/pattern/ {print $1}' file.txt`**
+- **find:**
+  - Searches for files in a directory hierarchy
+  - Example: **`find . -name '*.txt'`**
+- **egrep or grep -E:**
+  - Supports extended regular expressions with additional metacharacters
+  - Example: **`egrep 'pattern1|pattern2' file.txt`**
+- **vi and vim:**
+  - Text editors that support regex for searching and text manipulation
