@@ -44,9 +44,9 @@ echo "Hello, $user_name!"
   ```
 #### Conditionals:
 - Conditional statements allow you to make decisions in your script
-- **Syntax of simple `if`:** if [ condition ]; then _process_; fi
-- **Syntax of `if` - `else`:** if [ condition ]; then _process-1_; else _process-2_; fi
-- **Syntax of `if` - `elif` - `else` :** if [ condition-1 ]; then _process-1_; elif [ condition-2 ]; then _process-2_; else _process-3_; fi
+- **Syntax of simple `if`:** if [ condition ]; then _operation_; fi
+- **Syntax of `if` - `else`:** if [ condition ]; then _operation-1_; else _operation-2_; fi
+- **Syntax of `if` - `elif` - `else` :** if [ condition-1 ]; then _operation-1_; elif [ condition-2 ]; then _operation-2_; else _operation-3_; fi
 ```
 if [ "$NAME" == "John" ];
 then
@@ -60,4 +60,22 @@ fi
 ```
 #### Loops:
 - Loops are used to repeat commands or a block of code
+- **Syntax of `for` loop:** for _decleration_; do _operation_; done
+```
+## This loop can be used to print line by line with 2 seconds interval each
+for lines in $(cat /etc/passwd)
+do
+  echo "$lines"
+  sleep 2
+done
+```
+- **Syntax of `while` loop:** while _decleration_; do _operation_; done
+```
+## This loop can be used to read lines of a file and print with line number
+n=1
+while read -r line
+do
+  echo -e "$n \t$line"
+  n=$(expr $n + 1)
+done < /etc/passwd                                            ## `<` indicates stdin, `1>` indicates stdout, `2>` indicates stderr
 ```
