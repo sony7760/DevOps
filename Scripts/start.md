@@ -79,3 +79,30 @@ do
   n=$(expr $n + 1)
 done < /etc/passwd                                            ## `<` indicates stdin, `1>` indicates stdout, `2>` indicates stderr
 ```
+#### Functions:
+- Functions allow you to organize your code into reusable blocks
+- **Syntax of `function`:** function _function_name_ { operations }
+```
+function greet {
+  echo "Hello, $1!"
+}
+
+greet $1                                                     ## Reuse the function
+```
+#### Sourcing:
+- Optimize/enhance your script by extending to other scripts
+```
+ubuntu@sep2023:~$cat << END 1> input.sh
+> #!/bin/bash
+> USERNAME=jerry
+> PASSWORD="123456"
+> HOST="192.168.10.100"
+> END
+ubuntu@sep2023:~$
+ubuntu@sep2023:~$chmod u+x inputs.sh
+```
+
+```
+source /home/ubuntu/scripts/input.sh
+mysql -h $HOST -u $USERNAME -p $PASSWORD                    ## This will login to mysql db server 
+```
