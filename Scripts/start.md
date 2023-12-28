@@ -44,6 +44,9 @@ echo "Hello, $user_name!"
   ```
 #### Conditionals:
 - Conditional statements allow you to make decisions in your script
+- **Syntax of simple `if`:** if [ condition ]; then _process_; fi
+- **Syntax of `if` - `else`:** if [ condition ]; then _process-1_; else _process-2_; fi
+- **Syntax of `if` - `elif` - `else` :** if [ condition-1 ]; then _process-1_; elif [ condition-2 ]; then _process-2_; else _process-3_; fi
 ```
 if [ "$NAME" == "John" ];
 then
@@ -54,4 +57,7 @@ then
 else
     echo "You are not John/Jerry!"
 fi
+```
+#### Loops:
+- Loops are used to repeat commands or a block of code
 ```
