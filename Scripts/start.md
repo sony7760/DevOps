@@ -1,4 +1,4 @@
-## SHELL/BASH(Born Again SHELL) SCRIPT
+## SHELL/BASH SCRIPT
 Shell scripting is a way to automate tasks, run commands, and create simple programs using a shell, which is a command-line interpreter. The most common shell used in Unix-like operating systems is Bash (Bourne Again SHell)
 ```
 ubuntu@sep2023:~$mkdir scripts                                    ## Create a common directory
