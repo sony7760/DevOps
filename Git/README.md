@@ -47,7 +47,7 @@ git@node1~$git branch                                                           
 ### Client
 In windows, git bash can be used as client. In Linux, the terminal is suitable.
 
-Clone git repository locally.
+Clone git repository locally and perform below commands to understand the basic workflow.
 ```
 jerry@local~$git clone git@192.168.56.10:/scm/firstrepo                          # Create a local copy which enable you work offline
 jerry@local~$cd firstrepo
