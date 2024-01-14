@@ -9,3 +9,4 @@ Here are some key concepts and features of Git:
 - **Merging:** Git allows developers to merge changes from one branch into another. Merging is a way to integrate changes made in separate branches back into the main codebase.
 - **Pull:** The command is used to fetch and integrate changes from a remote repository into your current branch. It's a combination of two commands: **git fetch** and **git merge**. This command is often used when you want to update your local repository with changes made in the remote by others.
 - **Push:** The command is used to upload your local changes to a remote repository. It is used when you want to share your work with others or update a remote branch with your local changes.
+- **Conflict Resolution:** When multiple developers make changes to the same part of the code simultaneously, Git helps in detecting and resolving conflicts. Developers can manually resolve conflicts during the merging process.
