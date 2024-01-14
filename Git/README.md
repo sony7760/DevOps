@@ -39,7 +39,10 @@ Initialize a new bare repository.
 root@node1~#su - git
 git@node1~$cd /scm
 git@node1~$mkdir firstrepo
-git@node1~$git init
+git@node1~$cd firstrepo
+git@node1~$git init                                                              # This command will create all neccessary hierarchy 
+git@node1~$git checkout -b main                                                  # Create a new branch
+git@node1~$git branch                                                            # To display all branches and the current branch(*)
 ```
 ### Client
 In windows, git bash can be used as client. In Linux, the terminal is suitable.
@@ -48,5 +51,14 @@ Clone git repository locally.
 ```
 jerry@local~$git clone git@192.168.56.10:/scm/firstrepo                          # Create a local copy which enable you work offline
 jerry@local~$cd firstrepo
-
+jerry@local~$git remote -v                                                       # It should show you the remote repository details
+jerry@local~$git checkout main                                                   # Swith to the branch 'main'
+jerry@local~$touch samplefile
+jerry@local~$echo "Hello, World" > samplefile
+jerry@local~$git status                                                          # Check to know if any changes occurs
+jerry@local~$git add samplefile                                                  # Add changed file to the git tracker. "git add ." can be used to add all changed files
+jerry@local~$git pull                                                            # Fetch and merge if any changes occurs in the "main" branch of the remote
+jerry@local~$git status                                                          # It should show the added file names in green colour
+jerry@local~$git commit -m "initial commit"                                      # Save the changes to the local clone. -m option is using for specifying commit message
+jerry@local~$git push                                                            # Save the changes to the remote repository                        
 ```
