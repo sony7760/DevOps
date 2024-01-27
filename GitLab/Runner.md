@@ -18,7 +18,7 @@ After installation, it need to register the runner with the GitLab. Run the foll
 sudo gitlab-runner register
 ```
 - Enter the GitLab instance URL, eg: https://gitlab.com
-- Provide a token, which you can obtain from the GitLab project's CI/CD settings
+- Provide a token, which you can obtain from the GitLab project's settings **->** CI/CD **->** Runner
 - Specify a description for your runner, eg: JavaAppRunners
 - You can set multiple tags for the runner using comma, eg: java,maven,docker
 - Choose the executor. Docker is a commonly used executor, but there are others like Shell, Kubernetes, etc
