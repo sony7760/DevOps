@@ -21,7 +21,7 @@
   - **`a+`**                                            ## Matches 'a', 'aa', 'aaa', etc., but not an empty string
   - **`a?`**                                            ## Matches 'a' or an empty string
 - **Escape Characters:**
-  - **\.**                                              ## Matches a literal period
+  - **`\.`**                                            ## Matches a literal period
 
 #### Utilities Using Regular Expressions
 - **grep:**
