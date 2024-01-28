@@ -5,7 +5,7 @@
 
 #### Samples
 - **Basic Search:**
-  - **`grep 'pattern' filename`**                       ## Searches for the pattern in a file
+  - **`'pattern' filename`**                       ## Searches for the pattern in a file
 - **Wildcard Characters:**
   - **`.`**                                             ## Matches any single character
   - **`.*`**                                            ## Matches any sequence of characters
