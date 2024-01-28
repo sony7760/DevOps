@@ -43,8 +43,26 @@
     root@myhost~#grep -C 2 "root" /etc/passwd           ## Display 2 lines before and after the match
     ```
 - **sed:**
-  - Stream editor for filtering and transforming text
-  - Example: **`sed 's/old/new/' file.txt`**
+  - The name "sed" stands for "stream editor". The sed command in Linux is a stream editor used for filtering and transforming text. It is particularly powerful for making changes to a text stream or a file non-interactively
+  - Syntax: **`sed [options] 'command' filename`**
+  - Options:
+    - `-e:` Allows specifying multiple editing commands
+    - `-i:` Edit files in-place (i.e., save changes to the original file).
+  - Examples:
+    ```
+    root@myhost~#sed 's/root/ROOT/' /etc/passwd         ## Substitute (s): Replaces the first occurrence of "old" with "new" on each line
+    root@myhost~#sed 's/root/ROOT/g' /etc/passwd        ## Global Substitute (g flag): Replaces all occurrences of "old" with "new" on each line
+    root@myhost~#sed '1s/root/jerry/' /etc/passwd       ## Substitute with Line Numbers: Replaces the first occurrence of "old" with "new" on line 1
+    root@myhost~#sed -e 's/root/ROOT/' -e 's/sys/SYSTEM/' /etc/passwd ## Multiple Commands: Allows applying multiple commands`
+    root@myhost~#sed -n '2,5p' /etc/passwd              ## Print Specific Lines: Prints lines 2 to 5
+    root@myhost~#sed -n '0~2p' /etc/passwd              ## Print Every Nth Line: Prints every 2nd line
+    root@myhost~#sed '2d' /etc/passwd                   ## Delete Lines: Deletes line 2
+    root@myhost~#sed -n '/root/p' /etc/passwd           ## Print Only Matching Lines: Prints lines containing the pattern
+    root@myhost~#sed -n '/root/!p' /etc/passwd          ## Print Lines Not Matching: Prints lines not containing the pattern
+    root@myhost~#sed '/^$/d' /etc/passwd                ## Delete Empty Lines
+    root@myhost~#echo "hello" | sed 'y/abcdef/ABCDEF/'  ## Translate (Replace Characters): Outputs "hEllo"
+    root@myhost~#sed 's/[0-9][0-9]/XX/' /etc/passwd     ## This command replaces two consecutive digits with "XX."
+    ```
 - **awk:**
   - Text processing tool with powerful pattern matching
   - Example: **`awk '/pattern/ {print $1}' file.txt`**
