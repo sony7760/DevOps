@@ -56,6 +56,8 @@ Maven_build:
     - **Project-level Variables:** In the GitLab project, it can set global variables that are accessible by all jobs in the CI/CD pipeline. Go to the project, navigate to **Settings > CI / CD > Variables**, and add the desired key-value pairs
     - **Job-level Variables in .gitlab-ci.yml:** It can define variables at the [job level](https://docs.gitlab.com/ee/ci/variables/#skip-global-variables-in-a-single-job) in your **.gitlab-ci.yml** file. These variables are specific to the job and override any global variables with the same name
     - **Global variables in .gitlab-ci.yml:** It can define in the [top level](https://docs.gitlab.com/ee/ci/variables/#define-a-cicd-variable-in-the-gitlab-ciyml-file) of the **.gitlab-ci.yml** file
- - **Variables Types:**
-   - **Default Variables:** Default variables, also known as regular variables, are key-value pairs that you define in the CI/CD settings of your GitLab project. They can be accessed by all jobs in the pipeline
-   - **File variables:** It can be used to upload files to the GitLab CI/CD pipeline. These files can be used by jobs during the pipeline execution
+  - **Variables Types:**
+    - **Default Variables:** Default variables, also known as regular variables, are key-value pairs that you define in the CI/CD settings of your GitLab project. They can be accessed by all jobs in the pipeline
+    - **File variables:** It can be used to upload files to the GitLab CI/CD pipeline. These files can be used by jobs during the pipeline execution
+  - **Protected Variables:** Variables can be marked as "protected," which means they won't be exposed to the unprotected branches
+  - **Masked Variables:** Variables can be marked as "masked," which means their values will be masked(*****) in job logs
