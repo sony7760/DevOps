@@ -3,7 +3,7 @@
 - Regular expressions are special characters or sets of characters that help us to search for data and match the complex pattern.
 ![](./images/Regex.png)
 
-#### Examples
+#### Samples
 - **Basic Search:**
   - **`grep 'pattern' filename`**                       ## Searches for the pattern in a file
 - **Wildcard Characters:**
