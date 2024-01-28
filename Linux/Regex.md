@@ -30,6 +30,17 @@
   - Examples:
     ```
     root@myhost~#grep 'root' /etc/passwd                ## Search for a Pattern in a File
+    root@myhost~#grep -i "ROOT" /etc/passwd             ## Case-Insensitive Search
+    root@myhost~#grep -v "root" /etc/passwd             ## Invert the Match (Show Non-Matching Lines)
+    root@myhost~#grep -c "root" /etc/passwd             ## Count the Number of Matching Lines
+    root@myhost~#grep -n "root" /etc/passwd             ## Display Line Numbers with Matching Lines
+    root@myhost~#grep -w "root" /etc/passwd             ## Search for Whole Words
+    root@myhost~#grep -r "root" /etc/                   ## Recursive Search in Subdirectories
+    root@myhost~#grep -l "root" /etc/*                  ## Display Only File Names with Matching Lines
+    root@myhost~#grep -E "root|daemon" /etc/passwd      ## Extended grep operations
+    root@myhost~#grep -B 2 "root" /etc/passwd           ## Display 2 lines before the match
+    root@myhost~#grep -A 3 "root" /etc/passwd           ## Display 3 lines after the match
+    root@myhost~#grep -C 2 "root" /etc/passwd           ## Display 2 lines before and after the match
     ```
 - **sed:**
   - Stream editor for filtering and transforming text
