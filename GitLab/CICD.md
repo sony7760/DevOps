@@ -40,3 +40,14 @@ deploy:
   script:
     - echo "Deploying to production"
 ```
+- Artifact:
+  - Artifacts are files or directories created by a job that are passed between jobs in a pipeline. They can be used to share build outputs or dependencies
+```
+Maven_build:
+  stage: build
+  script:
+    - echo "Building the Maven application"
+  artifacts:
+    paths:
+      - target/                                ##It will create the whole target directory as artifact
+```
