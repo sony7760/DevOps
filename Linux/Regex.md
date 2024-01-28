@@ -26,7 +26,8 @@
 #### Utilities Using Regular Expressions
 - **grep:**
   - Searches for patterns in files
-  - Example: **`grep 'pattern' file.txt`**
+  - Syntax: **`grep 'pattern' file.txt`**
+  - Example: **`grep 'root' /etc/passwd`**
 - **sed:**
   - Stream editor for filtering and transforming text
   - Example: **`sed 's/old/new/' file.txt`**
