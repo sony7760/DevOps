@@ -25,9 +25,12 @@
 
 #### Utilities Using Regular Expressions
 - **grep:**
-  - Searches for patterns in files
+  - grep is an essential command for text processing and searching in the Linux command line. The name "grep" stands for "Global Regular Expression Print"
   - Syntax: **`grep 'pattern' file.txt`**
-  - Example: **`grep 'root' /etc/passwd`**
+  - Examples:
+    ```
+    root@myhost~#grep 'root' /etc/passwd                ## Search for a Pattern in a File
+    ```
 - **sed:**
   - Stream editor for filtering and transforming text
   - Example: **`sed 's/old/new/' file.txt`**
