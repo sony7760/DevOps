@@ -37,7 +37,7 @@ ubuntu@sep2023:~$ sudo vgs
 **Syntax:**  lvcreate -L `+<size>` -n `<lv name>` `<vg name>`
 ```
 ubuntu@sep2023:~$ sudo lvs
-ubuntu@sep2023:~$ sudo lvcreate apple-lvm /dev/sda6
+ubuntu@sep2023:~$ sudo lvcreate -L  +200M -n apple-lvm orange-vg
 ubuntu@sep2023:~$ sudo lvs
 ```
 #### Step 4 - Format logical volume
