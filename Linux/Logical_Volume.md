@@ -27,7 +27,7 @@ ubuntu@sep2023:~$ sudo pvcreate /dev/sda6
 ubuntu@sep2023:~$ sudo pvs
 ```
 #### Step 3 - Cretae Volume group
-**Syntax:**  vgcreate `<vg name>` `<physical volume>`
+**Syntax:**  vgcreate `<vg name>` `<physical volume>`                                            ## ## The absolute path of the pv
 ```
 ubuntu@sep2023:~$ sudo vgs
 ubuntu@sep2023:~$ sudo vgcreate orange-vg /dev/sda6
