@@ -27,8 +27,8 @@
     - Allow inbound traffic only from the Bastion host on necessary ports.
     - Allow outbound All-traffic from anywhere.
 - SSH Configuration:
-- Connect to the Bastion host using SSH. Provide the necessary steps for accessing the Bastion host securely.
-- From the Bastion host, SSH into the private instance. Explain how to set up SSH forwarding for secure connections.
+  - Connect to the Bastion host using SSH. Provide the necessary steps for accessing the Bastion host securely.
+  - From the Bastion host, SSH into the private instance. Explain how to set up SSH forwarding for secure connections.
 ## GuideLines:
 - Submit a well-organized document with clear headings and step numbers.
 - Include all necessary screenshots and code snippets.
