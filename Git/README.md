@@ -44,7 +44,7 @@ git@node1~$git init                                                             
 git@node1~$git checkout -b main                                                  # Create a new branch
 git@node1~$git branch                                                            # To display all branches and the current branch(*)
 ```
-### Client
+### Client(Your Local System)
 In windows, git bash can be used as client. In Linux, the terminal is suitable.
 
 Clone git repository locally and perform below commands to understand the basic workflow.
