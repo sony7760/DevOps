@@ -18,6 +18,11 @@
 - Create _.gitlab-ci.yml_ file in your GitLab project repository to include a job that will run on the AWS instance.
 - Make sure the CI/CD job is running to manage resources in the AWS according the role you given.
 
-**Documentation:**
-- 
+**Assignment Submission:**
+- Submit a well-organized document with clear headings and step numbers.
+- Include all necessary screenshots and code snippets.
+- Clearly explain the purpose and rationale behind each step.
+- Ensure that your setup follows security best practices.
+- Add troubleshooting steps,  If you encounter any issues during the setup.
 
+**Note:** Make sure to adhere to AWS free tier limits to avoid unexpected charges.
