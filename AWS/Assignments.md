@@ -1,4 +1,4 @@
-## Assignment 1: Setting Up AWS Instance Profile and GitLab CI/CD Runner
+#### Assignment 1: Setting Up AWS Instance Profile and GitLab CI/CD Runner
 - Setting up an AWS Instance Profile:
   - Create a new IAM Role in AWS with an appropriate name (e.g., GitLabCI-Role).
   - Attach a managed policy that grants the necessary permissions for your CI/CD jobs. Ensure minimal, least privilege permissions.
