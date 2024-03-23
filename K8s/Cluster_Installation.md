@@ -103,3 +103,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   systemctl enable --now kubelet     ## Enable kubelet service
   ```
+### Configure Master(primary control-plane) node
+- Initialize the cluster includes the cluster network option
+  ```
+  kubeadm init --apiserver-advertise-address=192.168.56.21 --control-plane-endpoint=k8smaster --upload-certs --pod-network-cidr=10.12.0.0/16
+  ```
+- Configure kubectl to access your cluster. **_Note:_** kubectl utility can be installed to any of the machine outside the cluster by copying the certs
