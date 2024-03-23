@@ -78,7 +78,7 @@ All of these steps given below is applicable for all the cluster nodes.
 - Add Kubernetes apt repository
   - Download the public signing key for the Kubernetes package repositories
     ```
-    mkdir -p -m 755 /etc/apt/keyrings   ## Run this command if the dir `/etc/apt/keyrings` does not exist
+    mkdir -p -m 755 /etc/apt/keyrings
     ```
     ```
     curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
