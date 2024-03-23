@@ -1,6 +1,6 @@
 ## Scenario
 - The command `curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg` is failing due to unknown certificate issuer.
-- apt-get update also fail in this situation
+- **apt-get update** also fail in this situation
 - Error looks like given below,
 ```
 root@node2:~# curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
