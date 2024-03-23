@@ -183,12 +183,13 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   reboot
   ```
+  - Ensure master(control-plane) node is Ready
   ```
-  kubectl get nodes                  ## Ensure master(control-plane) node is Ready
+  root@master:~# kubectl get nodes
+  NAME     STATUS   ROLES           AGE   VERSION
+  master   Ready    control-plane   55m   v1.29.3                
   ```
-  ```
-  kubectl get pods -n kube-system    ## Ensure all pods are up and running as given below example
-  ```
+  - Ensure all pods are up and running as given below example
   ```
   root@master:~# kubectl get pods -n kube-system
   NAME                                       READY   STATUS    RESTARTS       AGE
