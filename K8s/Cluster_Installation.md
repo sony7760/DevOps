@@ -161,7 +161,7 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   kubeadm init --apiserver-advertise-address=192.168.56.21 --control-plane-endpoint=master --upload-certs --pod-network-cidr=10.12.0.0/16
   ```
-  - Check [file](./kubeadm_initoutput.md) to see the ouput when the initialization is succeed 
+  - Check [file](./kubeadm_init_output.md) to see the ouput when the initialization is succeed 
 - Configure kubectl on master node to access your cluster. **Note:-** kubectl utility can be used from any of the machine(which should have network connectivity to cluster) outside the cluster by copying the certs.
   ```
   abc
