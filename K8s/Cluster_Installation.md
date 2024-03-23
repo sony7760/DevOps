@@ -136,6 +136,20 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   systemctl enable --now kubelet     ## Enable kubelet service
   ```
+### Configure Kubelet
+- Add a line to disable read swap by kubelet
+  ```
+  sed -i '5 i Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"' /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+  ```
+- Create new 10-kubeadm.conf file if doesn't exist
+  ```
+  mkdir -p  /usr/lib/systemd/system/kubelet.service.d/
+  ```
+- Copy content of the [file](./10-kubeadm.conf) to 10-kubeadm.conf
+  ```
+  vim 10-kubeadm.conf
+  ```
+
 ### Configure Master(primary control-plane) node
 - Initialize the cluster includes the cluster network option
   ```
