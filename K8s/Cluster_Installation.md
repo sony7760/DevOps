@@ -12,8 +12,8 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
     vim /etc/hosts
 
-    192.168.56.1  k8smaster
-    192.168.56.2  k8snode1
+    192.168.56.21  k8smaster
+    192.168.56.22  k8snode1
   ```
 - Disable swap memory
   ```
