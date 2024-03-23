@@ -21,7 +21,7 @@ All of these steps given below is applicable for all the cluster nodes.
   free -m
   ```
   ```
-  vim /etc/fstab                        
+  vim /etc/fstab                     
   ```
   ```
   #/swap.img	none	swap	sw	0	0      ## Comment the line of the swap
