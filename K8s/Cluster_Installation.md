@@ -173,8 +173,34 @@ All of these steps given below is applicable for all the cluster nodes.
   chown $(id -u):$(id -g) $HOME/.kube/config
   ```
 - Visit k8s [addons](https://kubernetes.io/docs/concepts/cluster-administration/addons/) page to apply appropriate CNI
+  - Installing [calico](https://docs.tigera.io/calico/latest/getting-started/kubernetes/kind#install-calico) operator and manifest for this case.
   ```
-  abc
+  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/tigera-operator.yaml
+  ```
+  ```
+  kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml
+  ```
+  ```
+  reboot
+  ```
+  ```
+  kubectl get nodes                  ## Ensure master(control-plane) node is Ready
+  ```
+  ```
+  kubectl get pods -n kube-system    ## Ensure all pods are up and running as given below example
+  ```
+  ```
+  root@master:~# kubectl get pods -n kube-system
+  NAME                                       READY   STATUS    RESTARTS       AGE
+  calico-kube-controllers-68cdf756d9-mw9kv   1/1     Running   0              15m
+  calico-node-9c2rb                          1/1     Running   0              15m
+  coredns-76f75df574-5pcjr                   1/1     Running   0              56m
+  coredns-76f75df574-67c6t                   1/1     Running   0              56m
+  etcd-master                                1/1     Running   3 (12m ago)    56m
+  kube-apiserver-master                      1/1     Running   3 (12m ago)    56m
+  kube-controller-manager-master             1/1     Running   13 (14m ago)   56m
+  kube-proxy-c54b7                           1/1     Running   1 (12m ago)    56m
+  kube-scheduler-master                      1/1     Running   13 (14m ago)   56m
   ```
 ### Join secondary Control-plane nodes (Optional)
 - Check your kubeadm initialization output to copy the exact command. The command given below is an example
