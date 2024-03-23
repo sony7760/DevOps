@@ -177,10 +177,12 @@ All of these steps given below is applicable for all the cluster nodes.
   abc
   ```
 ### Join secondary Control-plane nodes (Optional)
+- Check your kubeadm initialization output to copy the exact command. The command given below is an example
 ```
 kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92 --control-plane --certificate-key 2c545aef5d638f70144b56bfbdc13ed712c279ef7da4974f71c14332c3b103bf
 ```
 ### Join any number of worker nodes
+- Check your kubeadm initialization output to copy the exact command. The command given below is an example
 ```
 kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92
 ```
