@@ -34,6 +34,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
 - Load the required kernel modules
   ```
+  lsmod | grep 'overlay\|br_netfilter'
+  ```
+  ```
   tee /etc/modules-load.d/containerd.conf <<EOF
   overlay
   br_netfilter
@@ -44,6 +47,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   ```
   modprobe br_netfilter
+  ```
+  ```
+  lsmod | grep 'overlay\|br_netfilter'
   ```
 - Configure the kernel parameters
   ```
