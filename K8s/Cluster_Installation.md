@@ -25,9 +25,31 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   swapoff -a
   ```
+#### Install Container Runtime(Docker/Containerd/Rkt etc..)
 - Run package/repository update
   ```
   apt-get update
   ```
-#### Install Container Runtime(Docker/Containerd/Rkt etc..)
-- 
+- Install Docker
+  ```
+  apt-get install docker.io -y
+  ```
+- Enable Docker to launch on boot
+  ```
+  systemctl enable docker
+  ```
+- Verify Docker is running
+  ```
+  systemctl status docker
+
+  systemctl start docker              ## Start docker service if not running
+  ```
+- Change containerd configs
+  - Change the **SystemdCgroup=false** to **true** in the config.toml file. Follow the below coomands to create config.toml if doesn't exist it.
+  ```
+  mkdir -p /etc/containerd               ## Create directory if /etc/containerd/config.toml doesn't exist
+
+  containerd config default | sudo tee /etc/containerd/config.toml
+
+  sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+  ```
