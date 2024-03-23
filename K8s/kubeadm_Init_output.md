@@ -1,5 +1,5 @@
 ```
-root@master:~# kubeadm init --apiserver-advertise-address=192.168.56.2 --control-plane-endpoint=master --upload-certs --pod-network-cidr=10.12.0.0/16
+root@master:~# kubeadm init --apiserver-advertise-address=192.168.56.21 --control-plane-endpoint=master --upload-certs --pod-network-cidr=10.12.0.0/16
 ```
 ```
 [init] Using Kubernetes version: v1.29.3
