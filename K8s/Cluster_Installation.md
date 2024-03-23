@@ -156,7 +156,7 @@ All of these steps given below is applicable for all the cluster nodes.
   vim 10-kubeadm.conf
   ```
 
-### Configure Master(primary control-plane) node
+### Initialize Master(primary control-plane) node
 - Initialize the cluster includes the cluster network option
   ```
   kubeadm init --apiserver-advertise-address=192.168.56.21 --control-plane-endpoint=master --upload-certs --pod-network-cidr=10.12.0.0/16
@@ -164,5 +164,23 @@ All of these steps given below is applicable for all the cluster nodes.
   - Check [file](./kubeadm_init_output.md) to see the ouput when the initialization is succeed 
 - Configure kubectl on master node to access your cluster. **Note:-** kubectl utility can be used from any of the machine(which should have network connectivity to cluster) outside the cluster by copying the certs.
   ```
+  mkdir -p $HOME/.kube
+  ```
+  ```
+  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  ```
+  ```
+  chown $(id -u):$(id -g) $HOME/.kube/config
+  ```
+- Visit k8s [addons](https://kubernetes.io/docs/concepts/cluster-administration/addons/) page to apply appropriate CNI
+  ```
   abc
   ```
+### Join secondary Control-plane nodes (Optional)
+```
+kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92 --control-plane --certificate-key 2c545aef5d638f70144b56bfbdc13ed712c279ef7da4974f71c14332c3b103bf
+```
+### Join any number of worker nodes
+```
+kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92
+```
