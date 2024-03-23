@@ -139,7 +139,13 @@ All of these steps given below is applicable for all the cluster nodes.
 ### Configure Kubelet
 - Add a line to disable read swap by kubelet
   ```
+  sed '5!d' /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+  ```
+  ```
   sed -i '5 i Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"' /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+  ```
+  ```
+  awk 'NR==5'  /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
   ```
 - Create new 10-kubeadm.conf file if doesn't exist
   ```
