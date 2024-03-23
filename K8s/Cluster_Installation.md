@@ -26,6 +26,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   swapoff -a
   ```
+  ```
+  free -m
+  ```
 - Load the required kernel modules
   ```
   tee /etc/modules-load.d/containerd.conf <<EOF
