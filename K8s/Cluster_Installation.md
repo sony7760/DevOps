@@ -11,15 +11,17 @@ All of these steps given below is applicable for all the cluster nodes.
 - Add all node hostnames and ip address to the /etc/hosts file of the each node. It looks like given below,
   ```
     vim /etc/hosts
-
+  ```
+  ```
     192.168.56.21  k8smaster
     192.168.56.22  k8snode1
   ```
 - Disable swap memory
   ```
-  vim /etc/fstab                        ## Comment the line of the swap
-
-  #/swap.img	none	swap	sw	0	0
+  vim /etc/fstab                        
+  ```
+  ```
+  #/swap.img	none	swap	sw	0	0      ## Comment the line of the swap
   ```
   ```
   swapoff -a
