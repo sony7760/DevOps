@@ -125,6 +125,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   grep SystemdCgroup /etc/containerd/config.toml
   ```
+  ```
+  systemctl restart containerd
+  ```
 ### Install Kubernetes packages
 - Install kubeadm, kubelet, kubectl
   ```
