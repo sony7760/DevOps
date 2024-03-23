@@ -95,3 +95,11 @@ All of these steps given below is applicable for all the cluster nodes.
 
   sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
   ```
+### Install Kubernetes packages
+- Install kubeadm, kubelet, kubectl
+  ```
+  apt-get install -y kubelet kubeadm kubectl
+  ```
+  ```
+  systemctl enable --now kubelet     ## Enable kubelet service
+  ```
