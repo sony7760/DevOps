@@ -24,6 +24,19 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   swapoff -a
   ```
+- Load the required kernel modules
+  ```
+  tee /etc/modules-load.d/containerd.conf <<EOF
+  overlay
+  br_netfilter
+  EOF
+  ```
+  ```
+  modprobe overlay
+  ```
+  ```
+  modprobe br_netfilter
+  ```
 - install packages needed to use the Kubernetes apt repository
   ```
   apt-get update
