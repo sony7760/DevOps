@@ -87,7 +87,7 @@ All of these steps given below is applicable for all the cluster nodes.
     ```
     echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
     ```
-  - Foolow the [doc](../Troubleshoot/certificate_issuer_is_unknown.md) if **SSL Error(Certificate Unknown Issuer)** encountered
+  - Follow the [doc](../Troubleshoot/certificate_issuer_is_unknown.md) if **SSL Error(Certificate Unknown Issuer)** encountered
 - Update apt repository
   ```
   apt-get update
