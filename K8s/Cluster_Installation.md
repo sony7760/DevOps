@@ -25,12 +25,31 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   swapoff -a
   ```
-### Install Container Runtime(Docker/Containerd/Rkt etc..)
-- Run package/repository update
+- install packages needed to use the Kubernetes apt repository
   ```
   apt-get update
   ```
-- Install Docker
+  ```
+  apt-get install -y apt-transport-https ca-certificates curl gpg
+  ```
+- Add Kubernetes apt repository
+  - Download the public signing key for the Kubernetes package repositories
+    ```
+    mkdir -p -m 755 /etc/apt/keyrings   ## Run this command if the dir `/etc/apt/keyrings` does not exist
+    ```
+    ```
+    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    ```
+  - Add the Kubernetes apt repository for the version 1.29
+    ```
+    echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    ```
+- Update apt repository
+  ```
+  apt-get update
+  ```
+### Install Container Runtime(Docker/Containerd/Rkt etc..)
+- Install Docker package
   ```
   apt-get install docker.io -y
   ```
@@ -47,7 +66,7 @@ All of these steps given below is applicable for all the cluster nodes.
 - Change containerd configs
   - Change the **SystemdCgroup=false** to **true** in the config.toml file. Follow the below coomands to create config.toml if doesn't exist it.
   ```
-  mkdir -p /etc/containerd               ## Create directory if /etc/containerd/config.toml doesn't exist
+  mkdir -p /etc/containerd            ## Create directory if /etc/containerd/config.toml doesn't exist
 
   containerd config default | sudo tee /etc/containerd/config.toml
 
