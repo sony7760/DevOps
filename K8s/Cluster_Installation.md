@@ -53,6 +53,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
 - Configure the kernel parameters
   ```
+  sysctl -a | grep -E 'net.ipv4.ip_forward|net.bridge.bridge-nf-call-iptables|net.bridge.bridge-nf-call-ip6tables'
+  ```
+  ```
   tee /etc/sysctl.d/kubernetes.conf <<EOF
   net.bridge.bridge-nf-call-ip6tables = 1
   net.bridge.bridge-nf-call-iptables = 1
@@ -61,6 +64,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   ```
   sysctl --system                      ## Reload kernel parameters
+  ```
+  ```
+  sysctl -a | grep -E 'net.ipv4.ip_forward|net.bridge.bridge-nf-call-iptables|net.bridge.bridge-nf-call-ip6tables'
   ```
 - install packages needed to use the Kubernetes apt repository
   ```
