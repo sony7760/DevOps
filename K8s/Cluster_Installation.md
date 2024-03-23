@@ -8,7 +8,7 @@ This cluster configuration includes a master node and a worker node.
 - OS : Ubuntu 22.04.4
 ### Preparation
 All of these steps given below is applicable for all the cluster nodes.
-- Add all node hostnames and ip address to the /etc/hosts file of the each node. It looks like given below,
+- Add all node hostnames and ip address to the /etc/hosts file of the each node.
   ```
   vim /etc/hosts
   ```
