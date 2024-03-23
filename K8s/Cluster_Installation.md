@@ -117,7 +117,13 @@ All of these steps given below is applicable for all the cluster nodes.
   containerd config default | sudo tee /etc/containerd/config.toml
   ```
   ```
+  grep SystemdCgroup /etc/containerd/config.toml
+  ```
+  ```
   sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+  ```
+  ```
+  grep SystemdCgroup /etc/containerd/config.toml
   ```
 ### Install Kubernetes packages
 - Install kubeadm, kubelet, kubectl
