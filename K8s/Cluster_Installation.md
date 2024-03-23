@@ -203,7 +203,7 @@ All of these steps given below is applicable for all the cluster nodes.
   kube-proxy-c54b7                           1/1     Running   1 (12m ago)    56m
   kube-scheduler-master                      1/1     Running   13 (14m ago)   56m
   ```
-### Join secondary Control-plane nodes (Optional)
+### Join any number of secondary Control-plane nodes (Optional)
 - Check your kubeadm initialization output to copy the exact command. The command given below is an example
 ```
 kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92 --control-plane --certificate-key 2c545aef5d638f70144b56bfbdc13ed712c279ef7da4974f71c14332c3b103bf
@@ -212,4 +212,7 @@ kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-ce
 - Check your kubeadm initialization output to copy the exact command. The command given below is an example
 ```
 kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-cert-hash sha256:68569efa81a722046d71e2a73dbea5166d018a20975b3c2b3aea7d5e89245a92
+```
+### Check nodes status
+```
 ```
