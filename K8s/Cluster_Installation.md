@@ -37,6 +37,17 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
   modprobe br_netfilter
   ```
+- Configure the kernel parameters
+  ```
+  tee /etc/sysctl.d/kubernetes.conf <<EOF
+  net.bridge.bridge-nf-call-ip6tables = 1
+  net.bridge.bridge-nf-call-iptables = 1
+  net.ipv4.ip_forward = 1
+  EOF
+  ```
+  ```
+  sysctl --system                      ## Reload kernel parameters
+  ```
 - install packages needed to use the Kubernetes apt repository
   ```
   apt-get update
