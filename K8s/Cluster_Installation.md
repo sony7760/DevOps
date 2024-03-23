@@ -18,6 +18,9 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
 - Disable swap memory
   ```
+  free -m
+  ```
+  ```
   vim /etc/fstab                        
   ```
   ```
