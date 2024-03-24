@@ -30,7 +30,7 @@ ubuntu@sep2023:~$ mkdir /myfirstpart                                            
 ubuntu@sep2023:~$ mount /dev/sda6 /myfirstpart                                                   ## Mount partition to the targeted directory. umount comman can be used to unmount it
 ubuntu@sep2023:~$ df -h                                                                          ## To list all mounted filesystems
 ```
-**Syntax 2:** `<device>`  `<mountpoint>`  `<filesystem>` `<options>` `<dump>` `<fsck>`           ## Permanent Mount, which will persist after rebbot
+**Syntax 2:** `<device>`  `<mountpoint>`  `<filesystem>` `<options>` `<dump>` `<fsck>`           ## Permanent Mount, which will persist after reboot
 ```
 ubuntu@sep2023:~$ sudo vim  /etc/fstab
 /dev/sda6 /myfirstpart ext4 defaults  0 0                                                        ## Write and quit(:wq) from vim editor
