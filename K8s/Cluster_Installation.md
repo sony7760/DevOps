@@ -215,4 +215,13 @@ kubeadm join master:6443 --token gx4zxy.mjvgj2h7oack4p4d --discovery-token-ca-ce
 ```
 ### Check nodes status
 ```
+kubectl get nodes
+```
+it looks like given below
+```
+root@master:~# kubectl get nodes
+NAME     STATUS   ROLES           AGE   VERSION
+master   Ready    control-plane   43h   v1.29.3
+node1    Ready    <none>          42h   v1.29.3
+node2    Ready    <none>          42h   v1.29.3
 ```
