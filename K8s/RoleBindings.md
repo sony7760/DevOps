@@ -39,7 +39,8 @@ subjects:
 ```
 ```
 kubectl create -f developer-binding-myuser.yml
+```
 - Verify roles
-  ```
-  kubectl get rolebindings
-  ```
+```
+kubectl get rolebindings
+```
