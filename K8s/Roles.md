@@ -10,7 +10,7 @@ Role can be created either using an imperative(command) method or declerative(ma
 - Example
   - create the role named devloper with create, get, list, update and delete permissions to access the pod resources
   ```
-  kubectl create role devloper --verb=create --verb=get --verb=list --verb=update --verb=delete --resource=pods
+  kubectl create role developer --verb=create --verb=get --verb=list --verb=update --verb=delete --resource=pods
   ```
 - Verify roles
   ```
