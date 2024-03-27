@@ -19,30 +19,30 @@ Secret can be created either using an imperative(command) method or declerative(
 ### OR
 **Declerative:**
 - Encode username and password using base64 command
-```
-echo "tom" |base64
-```
-```
-echo "123456" |base64
-```
+  ```
+  echo "tom" |base64
+  ```
+  ```
+  echo "123456" |base64
+  ```
 - Create a definition file
-```
-root@k8snode:~# vim my-secret.yml
-```
-```
-apiVersion: v1
-kind: Secret
-metadata:
-  name: my-secret
-  namespace: default
-type: Opaque
-data:
-  user: dG9tCg==
-  password: MTIzNDU2Cg==
-```
-```
-kubectl create -f my-secret.yml
-```
+  ```
+  root@k8snode:~# vim my-secret.yml
+  ```
+  ```
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: my-secret
+    namespace: default
+  type: Opaque
+  data:
+    user: dG9tCg==
+    password: MTIzNDU2Cg==
+  ```
+  ```
+  kubectl create -f my-secret.yml
+  ```
 - Verify secrets
   ```
   kubectl get secrets
