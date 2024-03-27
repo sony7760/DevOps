@@ -29,6 +29,7 @@ echo "123456" |base64
 ```
 root@k8snode:~# vim my-secret.yml
 ```
+```
 apiVersion: v1
 kind: Secret
 metadata:
