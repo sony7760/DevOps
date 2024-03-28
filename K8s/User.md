@@ -32,3 +32,8 @@ spec:
 ```
 kubectl create -f myuser.yml
 ```
+### Approve the CertificateSigningRequest
+- Get the list of CSRs
+```
+kubectl get csr
+```
