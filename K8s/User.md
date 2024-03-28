@@ -11,11 +11,11 @@ openssl req -new -key myuser.key -out myuser.csr -subj "/CN=myuser"
 ### Create a CertificateSigningRequest
 - Copy the CSR file content from the output of the command given below
 ```
-root@k8smaster:~# cat myuser.csr | base64 | tr -d "\n"
+cat myuser.csr | base64 | tr -d "\n"
 ```
 - Open a new yml file with the snippet given below. You need to replace the **request** value using your CSR content
 ```
-root@k8smaster:~# vim myuser.yml
+vim myuser.yml
 ```
 ```
 apiVersion: certificates.k8s.io/v1
@@ -33,7 +33,15 @@ spec:
 kubectl create -f myuser.yml
 ```
 ### Approve the CertificateSigningRequest
-- Get the list of CSRs
+- Get the list of requets
 ```
 kubectl get csr
+```
+- Approve the request
+```
+kubectl certificate approve myuser
+```
+- Export the issued certificate from the approved CSR
+```
+kubectl get csr myuser -o jsonpath='{.status.certificate}'| base64 -d > myuser.crt
 ```
