@@ -1,5 +1,5 @@
 ## Service Account Token
-service account tokens are created by default when you create a service account. However, there are a few scenarios where service account tokens may not be created automatically
+Service account tokens are created by default when you create a service account. However, there are a few scenarios where service account tokens may not be created automatically
 
 ### Create Token
 Token can be created either using an imperative(command) method or declerative(manifest/defnition file) method
