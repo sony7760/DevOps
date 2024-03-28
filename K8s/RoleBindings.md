@@ -1,5 +1,5 @@
 ## RoleBinding
-To apply a [Role](./Roles.md) to a User/Service Account, administrators need to create a RoleBinding, which establish the association between the Role and the User/Service Account within a namespace.
+To apply a [Role](./Roles.md) to a User/Service Account, the administrators need to create a RoleBinding, which establish the association between the Role and the User/Service Account within a namespace.
 
 ### Create RoleBinding
 Rolebinding can be created either using an imperative(command) method or declerative(manifest/defnition file) method
