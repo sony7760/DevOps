@@ -45,3 +45,7 @@ kubectl certificate approve myuser
 ```
 kubectl get csr myuser -o jsonpath='{.status.certificate}'| base64 -d > myuser.crt
 ```
+### Create Role and RoleBinding
+Define the Role and RoleBinding for the user myuser to access Kubernetes resources in a namespace.
+- Follow the [link](./Roles.md) to create a Role
+- Follow the [link](./RoleBindings.md) to create a RoleBinding
