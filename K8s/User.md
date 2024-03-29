@@ -41,7 +41,7 @@ kubectl get csr
 ```
 kubectl certificate approve myuser
 ```
-- Export the issued certificate from the approved CSR
+- Export the issued certificate to a file from the approved CSR
 ```
 kubectl get csr myuser -o jsonpath='{.status.certificate}'| base64 -d > myuser.crt
 ```
