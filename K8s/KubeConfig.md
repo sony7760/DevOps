@@ -30,7 +30,7 @@
   kubectl --kubeconfig myuser-config config set-context myuser --cluster=kubernetes --user=myuser
   ```
   ```
-  kubectl --kubeconfig myuser-config config use-context myuse
+  kubectl --kubeconfig myuser-config config use-context myuser
   ```
   ```
   kubectl --kubeconfig myuser-config config view
