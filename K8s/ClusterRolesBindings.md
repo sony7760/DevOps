@@ -27,7 +27,6 @@ ClusterRolebinding can be created either using an imperative(command) method or 
   kind: ClusterRoleBinding
   metadata:
     name: developer-binding-my-svc-account
-    namespace: default
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
