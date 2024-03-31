@@ -22,7 +22,7 @@
   ```
   kubectl --kubeconfig myuser-config config view
   ```
-- Add new user into the config
+- Add new user(myuser) into the config
   ```
   kubectl --kubeconfig myuser-config config set-credentials myuser --client-key=myuser.key --client-certificate=myuser.crt --embed-certs=true
   ```
