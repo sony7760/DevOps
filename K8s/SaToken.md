@@ -8,35 +8,17 @@ Token can be created either using an imperative(command) method or declerative(m
 - Syntax:
   - kubectl create token {service_account_name}
 - Example
-  - create the token for service account my-svc-account
+  - create the token for service account [my-svc-account](./ServiceAccount.md)
   ```
   kubectl create token my-svc-account
   ```
 - Verify service  accounts
   ```
-  kubectl get serviceaccounts
+  kubectl describe serviceaccount my-service-account
   ```
 ### OR
 **Declerative:**
 - Create a definition file
-```
-vim my-svc-account.yml
-```
-```
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: my-svc-account
-  namespace: default
-```
-```
-kubectl create -f vim my-svc-account.yml
-```
-- Verify service  accounts
-  ```
-  kubectl get serviceaccounts
-  ```
-- Create token
   ```
   vim my-service-account-token.yml
   ```
