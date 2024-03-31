@@ -32,3 +32,6 @@
   ```
   kubectl --kubeconfig myuser-config config use-context myuser
   ```
+  ```
+  kubectl --kubeconfig myuser-config config view
+  ```
