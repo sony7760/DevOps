@@ -16,30 +16,38 @@ Token can be created either using an imperative(command) method or declerative(m
 **Declerative:**
 - Create a definition file
 ```
-root@k8snode:~# vim my-svc-account.yml
+vim my-svc-account.yml
 ```
 ```
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+apiVersion: v1
+kind: ServiceAccount
 metadata:
-  name: developer
+  name: my-svc-account
   namespace: default
-rules:
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
-  - create
-  - get
-  - list
-  - update
-  - delete
 ```
 ```
-kubectl create -f developer.yml
+kubectl create -f vim my-svc-account.yml
 ```
-- Verify roles
+- Verify service  accounts
   ```
-  kubectl get roles
+  kubectl get serviceaccounts
+  ```
+- Create token
+  ```
+  vim my-service-account-token.yml
+  ```
+  ```
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: my-service-account-token
+    annotations:
+      kubernetes.io/service-account.name: my-service-account
+  type: kubernetes.io/service-account-token
+  ```
+  ```
+  kubectl create -f my-service-account-token.yml
+  ```
+  ```
+  kubectl describe serviceaccount my-service-account
   ```
