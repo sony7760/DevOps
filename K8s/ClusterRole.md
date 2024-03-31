@@ -19,33 +19,33 @@ ClusterRole can be created either using an imperative(command) method or declera
 ### OR
 **Declerative:**
 - Create a definition file
-```
-root@k8snode:~# vim developer-clusterrole.yml
-```
-```
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: developer
-rules:
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
-  - create
-  - get
-  - list
-  - update
-  - delete
-```
-```
-kubectl create -f developer-clusterrole.yml
-```
+  ```
+  vim developer-clusterrole.yml
+  ```
+  ```
+  apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    name: developer
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - pods
+    verbs:
+    - create
+    - get
+    - list
+    - update
+    - delete
+  ```
+  ```
+  kubectl create -f developer-clusterrole.yml
+  ```
 - Verify roles
   ```
   kubectl get clusterroles
   ```
 ### Reference
-- *namespace* omitted since ClusterRoles are not namespaced
+- *namespace* is omitted since the ClusterRoles are not namespaced
 - [Thirdparty doc](https://medium.com/rahasak/kubernetes-role-base-access-control-with-service-account-e4c65e3f25cc)
