@@ -39,4 +39,4 @@ kubectl create -f vim my-svc-account.yml
 ### Create Token
 - Create new [token](./SaToken.md) for service account authentication
 ### Create ClusterRole
-- Follow the [link](./ClusterRole.md) to create a ClusterRole for the service account
+- Follow the [link](./ClusterRoles.md) to create a ClusterRole for the service account
