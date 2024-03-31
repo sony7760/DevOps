@@ -52,3 +52,6 @@ Define the Role and RoleBinding for the user myuser to access Kubernetes resourc
 ### Install kubectl
 kubectl is a command-line tool used to interact with Kubernetes clusters
 - Follow the [link](./Kubectl.md) to install kubectl binary
+### Add kubeconfig
+Configuration file used by the **kubectl** command-line tool
+- Follow the [link](./KubeConfig.md) to create config file
