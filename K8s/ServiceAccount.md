@@ -38,7 +38,13 @@ kubectl create -f vim my-svc-account.yml
   ```
 ### Create Token
 - Create new [token](./SaToken.md) for service account authentication
+
 ### Create ClusterRole
 - Follow the [link](./ClusterRoles.md) to create a ClusterRole
+
 ### Create ClusterRoleBinding
 - Follow the [link](./ClusterRoleBindings.md) to bind ClusterRole with the service account
+
+### References
+- [Official doc](https://kubernetes.io/docs/concepts/security/service-accounts/)
+- [Thirdparty doc](https://medium.com/rahasak/kubernetes-role-base-access-control-with-service-account-e4c65e3f25cc)
