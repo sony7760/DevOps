@@ -9,9 +9,9 @@ ServiceAccount can be created either using an imperative(command) method or decl
   - kubectl create serviceaccount {service_account_name}
 - Example
   - create the token for service account my-svc-account
-  ```
-  kubectl create serviceaacount my-svc-account
-  ```
+    ```
+    kubectl create serviceaacount my-svc-account
+    ```
 - Verify service  accounts
   ```
   kubectl get serviceaccounts
@@ -19,19 +19,19 @@ ServiceAccount can be created either using an imperative(command) method or decl
 ### OR
 **Declerative:**
 - Create a definition file
-```
-vim my-svc-account.yml
-```
-```
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: my-svc-account
-  namespace: default
-```
-```
-kubectl create -f vim my-svc-account.yml
-```
+  ```
+  vim my-svc-account.yml
+  ```
+  ```
+  apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: my-svc-account
+    namespace: default
+  ```
+  ```
+  kubectl create -f vim my-svc-account.yml
+  ```
 - Verify service  accounts
   ```
   kubectl get serviceaccounts
