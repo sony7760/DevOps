@@ -57,3 +57,11 @@ The config file can be copied to any location(remote/local)
   ```
   ssh ubuntu@192.168.56.22 "chown -R ubuntu.ubuntu ~/.kube"
   ```
+### Test access
+- Switch to the user ubuntu(local/remote)
+  ```
+  kubectl get pods
+  ```
+### Reference
+- [Official-doc](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/#add-to-kubeconfig)
+- [Thirdparty-doc](https://aungzanbaw.medium.com/a-step-by-step-guide-to-creating-users-in-kubernetes-6a5a2cfd8c71)
