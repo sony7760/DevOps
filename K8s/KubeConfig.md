@@ -47,7 +47,7 @@ The config file can be copied to any location(remote/local)
   ```
   chown -R ubuntu.ubuntu /home/ubuntu/.kube
   ```
-- Copy to a remote ubuntu user's home directory
+- Copy to a remote(My server ip address is 192.168.56.22) ubuntu user's home directory
   ```
   ssh ubuntu@192.168.56.22 "mkdir -p ~/.kube"
   ```
