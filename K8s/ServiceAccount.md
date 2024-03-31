@@ -36,3 +36,5 @@ kubectl create -f vim my-svc-account.yml
   ```
   kubectl get serviceaccounts
   ```
+### Create Token
+- Create new [token](./SaToken.md) for service account authentication
