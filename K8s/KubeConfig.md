@@ -30,8 +30,30 @@
   kubectl --kubeconfig myuser-config config set-context myuser --cluster=kubernetes --user=myuser
   ```
   ```
-  kubectl --kubeconfig myuser-config config use-context myuser
+  kubectl --kubeconfig myuser-config config use-context myuse
   ```
   ```
   kubectl --kubeconfig myuser-config config view
+  ```
+### Copy config to the desired user home directory
+The config file can be copied to any location(remote/local)
+- Copy to a local ubuntu user's home directory
+  ```
+  mkdir -p /home/ubuntu/.kube
+  ```
+  ```
+  cp myuser-config /home/ubuntu/.kube/config
+  ```
+  ```
+  chown -R ubuntu.ubuntu /home/ubuntu/.kube
+  ```
+- Copy to a remote ubuntu user's home directory
+  ```
+  ssh ubuntu@192.168.56.22 "mkdir -p ~/.kube"
+  ```
+  ```
+  scp myuser-config ubuntu@192.168.56.22:~/.kube/config
+  ```
+  ```
+  ssh ubuntu@192.168.56.22 "chown -R ubuntu.ubuntu ~/.kube"
   ```
