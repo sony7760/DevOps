@@ -7,4 +7,18 @@ Download the latest release of the kubectl binary
   ```
   https://storage.googleapis.com/kubernetes-release/release/stable.txt
   ```
-- 
+- Set the variable KUBE_VERSION to the latest release
+  ```
+  export KUBE_VERSION=$(curl https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+  ```
+  ```
+  echo $KUBE_VERSION
+  ```
+- Download the kubectl binary
+  ```
+  curl -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/"${KUBE_VERSION}"/bin/linux/amd64/kubectl
+  ```
+- Set executable permission(For all) on kubectl command
+  ```
+  chmod a+x /usr/local/bin/kubectl
+  ```
