@@ -12,6 +12,10 @@ Token can be created either using an imperative(command) method or declerative(m
   ```
   kubectl create token my-svc-account
   ```
+- Verify service  accounts
+  ```
+  kubectl get serviceaccounts
+  ```
 ### OR
 **Declerative:**
 - Create a definition file
