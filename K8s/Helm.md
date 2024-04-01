@@ -3,7 +3,7 @@
 
 ### Installation
 Download the latest/stable release of the helm binary
-- Identify the latest release by browsinhg the URL given below
+- Identify the latest release by browsing the URL given below
   ```
   https://github.com/helm/helm/releases
   ```
