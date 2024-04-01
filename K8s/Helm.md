@@ -9,7 +9,7 @@ Download the latest/stable release of the helm binary
   ```
 - Set the variable HELM_VERSION to the desired version
   ```
-  export HELM_VERSION=3.14.3
+  export HELM_VERSION=v3.14.3
   ```
   ```
   echo $HELM_VERSION
