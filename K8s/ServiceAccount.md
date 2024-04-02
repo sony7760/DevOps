@@ -10,7 +10,7 @@ ServiceAccount can be created either using an imperative(command) method or decl
 - Example
   - create the token for service account my-svc-account
     ```
-    kubectl create serviceaacount my-svc-account
+    kubectl create serviceaccount my-svc-account
     ```
 - Verify service  accounts
   ```
