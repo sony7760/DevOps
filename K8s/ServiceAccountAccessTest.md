@@ -19,7 +19,7 @@ To test the permissions that assigned to the Service Account,  It can be deploye
     serviceAccountName: my-svc-account
   ```
   ```
-  kubectl create -f  svcaccount-test.yml
+  kubectl create -f  satest.yml
   ```
 ###  Install kubectl utility
 - Login to the  pod
