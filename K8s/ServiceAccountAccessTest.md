@@ -4,7 +4,7 @@ To test the permissions that assigned to the Service Account,  It can be deploye
 ### Create yaml file
 - Create the definition file by declaring service account name
   ```
-  vim svcaccount-test.yml
+  vim satest.yml
   ```
   ```
   apiVersion: v1
