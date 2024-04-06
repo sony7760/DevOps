@@ -1,9 +1,9 @@
 ## About
 [Terraform](https://developer.hashicorp.com/terraform?product_intent=terraform) is an open-source Infrastructure as Code (IaC) software tool created by HashiCorp. It allows users to define and provision data center infrastructure using a high-level configuration language, which can be versioned, shared, and reused across teams. Terraform manages resources across various cloud providers, on-premises environments, and Software as a Service (SaaS) offerings, enabling infrastructure automation and scalability
 
-Refer the [link](./Install.md) to install terraform utility 
+- Refer the [link](./Install.md) to install terraform utility 
 
-These commands given below for managing infrastructure with Terraform
+- These commands given below for managing infrastructure with Terraform
 
 #### terraform init:
 - Initializes a Terraform working directory by downloading necessary provider plugins and setting up the backend
