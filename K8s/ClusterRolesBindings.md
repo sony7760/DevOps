@@ -42,7 +42,7 @@ ClusterRolebinding can be created either using an imperative(command) method or 
   ```
 - Verify ClusterRoleBindings
   ```
-  kubectl get clusterrolebindings
+  kubectl get clusterrolebindings | grep "developer-binding-my-svc-account"
   ```
 ### References
 - [Official doc](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_clusterrolebinding/)
