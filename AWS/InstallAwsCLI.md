@@ -13,4 +13,10 @@ AWS CLI (Amazon Web Services Command Line Interface) is a unified tool provided 
   ```
   ./aws/install
   ```
+#### Validate installation
+- Print the version of the CLI tool
+  ```
+  aws --version
+  ```
+#### Documentation
 - Refer the [AWS official doc](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for the latest updates and versions of CLI installation
