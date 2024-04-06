@@ -40,7 +40,7 @@ ServiceAccount can be created either using an imperative(command) method or decl
 - Create new [token](./SaToken.md) for service account authentication
 
 ### Create Role/ClusterRole
-- Follow the [link](./ClusterRoles.md) to create a ClusterRole
+- Follow the [link](./ClusterRoles.md) to apply a ClusterRole
   **OR**
 - Refer the [link](./Roles.md) to create a Role
 
