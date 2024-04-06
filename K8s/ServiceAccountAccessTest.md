@@ -14,7 +14,7 @@ To test the permissions that assigned to the Service Account,  It can be deploye
     namespace: default
   spec:
     containers:
-    - image: nginx:1.14.2
+    - image: bibinwilson/docker-kubectl:latest
       name: kubectl
     serviceAccountName: my-svc-account
   ```
