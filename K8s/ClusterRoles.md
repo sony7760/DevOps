@@ -48,4 +48,5 @@ ClusterRole can be created either using an imperative(command) method or declera
   ```
 ### Reference
 - *namespace* is omitted since the ClusterRoles are not namespaced
+- Follow the [link](./ClusterRolesBindings.md) to create the **ClusterRoleBinding**
 - [Thirdparty doc](https://medium.com/rahasak/kubernetes-role-base-access-control-with-service-account-e4c65e3f25cc)
