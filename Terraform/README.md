@@ -28,7 +28,7 @@ These commands given below for managing infrastructure with Terraform
 #### terraform apply: 
 - Applies the changes required to reach the desired state of the configuration, creating, modifying, or deleting resources as necessary
   ```
-  terraform plan
+  terraform apply
   ```
 
 #### terraform destroy:
