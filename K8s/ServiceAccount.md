@@ -39,12 +39,15 @@ ServiceAccount can be created either using an imperative(command) method or decl
 ### Create Token
 - Create new [token](./SaToken.md) for service account authentication
 
-### Create ClusterRole
+### Create Role/ClusterRole
 - Follow the [link](./ClusterRoles.md) to create a ClusterRole
+  **OR**
+- Refer the [link](./Roles.md) to create a Role
 
-### Create ClusterRoleBinding
+### Create RoleBinding/ClusterRoleBinding
 - Follow the [link](./ClusterRoleBindings.md) to bind ClusterRole with the service account
-
+  **OR**
+- Refer the [link](./RoleBindings.md) to create a RoleBindings
 ### References
 - [Official doc](https://kubernetes.io/docs/concepts/security/service-accounts/)
 - [Thirdparty doc](https://medium.com/rahasak/kubernetes-role-base-access-control-with-service-account-e4c65e3f25cc)
