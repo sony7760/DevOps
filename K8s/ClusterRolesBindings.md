@@ -27,15 +27,15 @@ ClusterRolebinding can be created either using an imperative(command) method or 
   kind: ClusterRoleBinding
   metadata:
     name: developer-binding-my-svc-account
+  subjects:
+  - kind: ServiceAccount
+    name: my-svc-account # Name is case sensitive
+    apiGroup: ""
+    namespace: default
   roleRef:
-    apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
     name: developer
-  subjects:
-  - apiGroup: rbac.authorization.k8s.io
-    kind: ServiceAccount
-    name: my-svc-account
-
+    apiGroup: rbac.authorization.k8s.io
   ```
   ```
   kubectl create -f developer-binding-my-svc-account.yml
