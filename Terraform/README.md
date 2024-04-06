@@ -3,7 +3,7 @@
 
 - Refer the [link](./Install.md) to install terraform utility 
 
-- These commands given below for managing infrastructure with Terraform
+These commands given below for managing infrastructure with Terraform
 
 #### terraform init:
 - Initializes a Terraform working directory by downloading necessary provider plugins and setting up the backend
