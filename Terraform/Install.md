@@ -10,7 +10,7 @@
   apt update
   ```
   ```
-  apt install terraform
+  apt install -y terraform
   ```
 ### Validate the installation
 - Execute the command for terraform version check
