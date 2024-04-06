@@ -24,6 +24,7 @@ To test the permissions that assigned to the Service Account,  It can be deploye
   ```
   kubectl get pods
   ```
+  **Note:** Follow the [link](./ServiceAccount.md) to create service account and neccessary roles
 ### Test Access
 - Test a pod creation from satest pod
   ```
