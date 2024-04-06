@@ -24,7 +24,7 @@ ClusterRole can be created either using an imperative(command) method or declera
   ```
   ```
   apiVersion: rbac.authorization.k8s.io/v1
-  kind: Role
+  kind: ClusterRole
   metadata:
     name: developer
   rules:
