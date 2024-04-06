@@ -44,7 +44,7 @@ ClusterRole can be created either using an imperative(command) method or declera
   ```
 - Verify roles
   ```
-  kubectl get clusterroles
+  kubectl get clusterroles |grep developer
   ```
 ### Reference
 - *namespace* is omitted since the ClusterRoles are not namespaced
