@@ -21,6 +21,9 @@ To test the permissions that assigned to the Service Account,  It can be deploye
   ```
   kubectl create -f  satest.yml
   ```
+  ```
+  kubectl get pods
+  ```
 ###  Install kubectl utility
 - Login to the  pod
   ```
