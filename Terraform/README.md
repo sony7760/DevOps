@@ -40,5 +40,5 @@ These commands given below for managing infrastructure with Terraform
 #### terraform show: 
 - Displays the current state or detailed information about the resources managed by Terraform
   ```
-  terraform destroy
+  terraform show
   ```
