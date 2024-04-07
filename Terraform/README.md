@@ -30,13 +30,13 @@ These commands given below for managing infrastructure with Terraform
 #### terraform apply: 
 - Applies the changes required to reach the desired state of the configuration, creating, modifying, or deleting resources as necessary
   ```
-  terraform apply
+  terraform apply -auto-approve
   ```
 
 #### terraform destroy:
 - Destroys all the resources defined in the Terraform configuration, effectively tearing down the infrastructure
   ```
-  terraform destroy
+  terraform destroy -auto-approve
   ```
 
 #### terraform show: 
