@@ -33,5 +33,17 @@ It allows Terraform to dynamically gather information about existing resources o
   ```
 - Create a ec2_1.tf file
   ```
-  
+  /*terraform {
+    required_providers {
+      aws = {
+        source  = "hashicorp/aws"
+        version = "~> 4.16"
+      }
+    }
+    required_version = ">= 1.2.0"
+  }
+
+  provider "aws" {
+    region  = "ap-south-1"
+  }*/
   ```
