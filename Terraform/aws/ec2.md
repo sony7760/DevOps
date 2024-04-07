@@ -37,3 +37,5 @@ This is for provisioning an ec2 instance using terraform
     }
   }
   ```
+#### Deploy
+- Follow the [link](../README.md) to proceed with commands
