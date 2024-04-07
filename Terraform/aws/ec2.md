@@ -9,7 +9,8 @@ This is for provisioning an ec2 instance
   ```
   cd ec2/
   ```
-- Create configurations
+#### Configuration
+- Create terraform file
   ```
   vim ec2.tf
   ```
@@ -22,5 +23,17 @@ This is for provisioning an ec2 instance
       }
     }
     required_version = ">= 1.2.0"
+  }
+
+  provider "aws" {
+    region  = "ap-south-1"
+  }
+
+  resource "aws_instance" "web_server" {
+    ami           = "ami-007020fd9c84e18c7"
+    instance_type = "t2.micro"
+    tags = {
+    Name = "webserver"
+    }
   }
   ```
