@@ -4,10 +4,10 @@ This is for provisioning an ec2 instance using terraform
 #### Workspace
 - Create a directory for workspace
   ```
-  mkdir ec2
+  mkdir -p aws
   ```
   ```
-  cd ec2/
+  cd aws/
   ```
 #### Configuration
 - Create terraform file
