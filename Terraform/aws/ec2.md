@@ -1,5 +1,5 @@
 ## About
-This is for provisioning an ec2 instance
+This is for provisioning an ec2 instance using terraform
 
 #### Workspace
 - Create a directory for workspace
