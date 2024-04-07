@@ -31,7 +31,7 @@ It allows Terraform to dynamically gather information about existing resources o
     }
   }
   ```
-- Create a ec2_1.tf file
+- Create a ec2_1.tf file which shows you how to map data from data.tf file
   ```
   /*terraform {
     required_providers {
