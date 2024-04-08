@@ -37,3 +37,7 @@ Pod can be created either using an imperative(command) method or declerative(man
   ```
   ```
   kubectl create -f my-pod.yml
+- Verify pod
+  ```
+  kubectl get pods -n  default
+  ```
