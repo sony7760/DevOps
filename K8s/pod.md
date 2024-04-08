@@ -6,15 +6,15 @@ Pod can be created either using an imperative(command) method or declerative(man
 
 **Imperative:**
 - Syntax:
-  - kubectl create secret generic {secret_name} --from-literal=key1=value1 --from-literal=key2=value2
+  - kubectl run {pod_name} image={container_image}
 - Example
-  - create the secret named mysecret
+  - create the pod named myapp
   ```
-  kubectl create secret generic my-secret --from-literal=user=tom --from-literal=password=123456
+  kubectl run myapp --image=nginx --namespace default
   ```
-- Verify secret
+- Verify pod
   ```
-  kubectl get secrets
+  kubectl get pods -n  default
   ```
 ### OR
 **Declerative:**
@@ -27,6 +27,7 @@ Pod can be created either using an imperative(command) method or declerative(man
   kind: Pod
   metadata:
     name: nginx
+    namespace: default
   spec:
     containers:
     - name: nginx
