@@ -18,27 +18,21 @@ Pod can be created either using an imperative(command) method or declerative(man
   ```
 ### OR
 **Declerative:**
-- Encode username and password using base64 command
-  ```
-  echo "tom" |base64
-  ```
-  ```
-  echo "123456" |base64
-  ```
 - Create a definition file
   ```
-  root@k8snode:~# vim my-secret.yml
+  vim my-pod.yml
   ```
   ```
   apiVersion: v1
-  kind: Secret
+  kind: Pod
   metadata:
-    name: my-secret
-    namespace: default
-  type: Opaque
-  data:
-    user: dG9tCg==
-    password: MTIzNDU2Cg==
+    name: nginx
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:1.14.2
+      ports:
+      - containerPort: 80
   ```
   ```
-  kubectl create -f my-secret.yml
+  kubectl create -f my-pod.yml
