@@ -32,6 +32,10 @@ Variables in Terraform allow users to parameterize their infrastructure code, ma
     default = "ami-007020fd9c84e18c7"
   }
   ```
+- Create ec2 instance
+  ```
+  vim ec2_1.tf
+  ```
   ```
   /*terraform {
     required_providers {
