@@ -1,5 +1,5 @@
 ## About
-This is for provisioning an ec2 instance using terraform
+Variables in Terraform allow users to parameterize their infrastructure code, making it more flexible and reusable
 
 #### Workspace
 - Create a directory for workspace
@@ -12,7 +12,7 @@ This is for provisioning an ec2 instance using terraform
 #### Configuration
 - Create terraform file
   ```
-  vim ec2.tf
+  vim variable.tf
   ```
   ```
   terraform {
