@@ -1,43 +1,38 @@
-## Pod
-A Pod is the smallest deployable unit that represents one or more containers running together on a Kubernetes cluster. A Pod encapsulates an application's container(s), storage resources, and a unique network IP, and it represents a single instance of a running process in the cluster
+## Namespace
+A namespace is a virtual cluster or a logical partition within a Kubernetes cluster that enables multiple teams, or projects to share the same physical cluster resources while providing isolation, segmentation, and resource quota management
 
-### Create pod
-Pod can be created either using an imperative(command) method or declerative(manifest/defnition file) method
+### Create Namespace
+Namespace can be created either using an imperative(command) method or declerative(manifest/defnition file) method
 
 **Imperative:**
 - Syntax:
-  - kubectl run {pod_name} image={container_image}
+  - kubectl create ns {namespace_name}
 - Example
-  - create the pod named myapp
+  - create the namespace named helloword
   ```
-  kubectl run myapp --image=nginx --namespace default
+  kubectl create ns helloword
   ```
-- Verify pod
+- Verify namespace
   ```
-  kubectl get pods -n  default
+  kubectl get ns
   ```
 ### OR
 **Declerative:**
 - Create a definition file
   ```
-  vim my-pod.yml
+  vim my-ns.yml
   ```
   ```
   apiVersion: v1
-  kind: Pod
+  kind: Namespace
   metadata:
-    name: myapp
-    namespace: default
-  spec:
-    containers:
-    - name: myapp-container
-      image: nginx:1.14.2
-      ports:
-      - containerPort: 80
+    name: jan2024
+    labels:
+      project: techmindz
   ```
   ```
-  kubectl create -f my-pod.yml
+  kubectl create -f my-ns.yml
 - Verify pod
   ```
-  kubectl get pods -n  default
+  kubectl get ns
   ```
