@@ -19,13 +19,21 @@ Variables in Terraform allow users to parameterize their infrastructure code, ma
     type = string
     default = "ap-south-1"
   }
+  variable "type" {
+    type = string
+    default = "t2.micro"
+  }
   variable "tag" {
     type = string
     default = "frontend"
   }
+  variable "image" {
+    type = string
+    default = "ami-007020fd9c84e18c7"
+  }
   ```
   ```
-  terraform {
+  /*terraform {
     required_providers {
       aws = {
         source  = "hashicorp/aws"
@@ -36,14 +44,14 @@ Variables in Terraform allow users to parameterize their infrastructure code, ma
   }
 
   provider "aws" {
-    region  = "ap-south-1"
-  }
+    region  = var.region
+  }*/
 
   resource "aws_instance" "web_server" {
-    ami           = "ami-007020fd9c84e18c7"
-    instance_type = "t2.micro"
+    ami           = var.ami
+    instance_type = var.type
     tags = {
-    Name = "webserver"
+    Name = var.tag
     }
   }
   ```
