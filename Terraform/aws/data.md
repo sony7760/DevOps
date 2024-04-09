@@ -12,7 +12,7 @@ It allows Terraform to dynamically gather information about existing resources o
   ```
   data "aws_s3_bucket" "existing_bucket" {
     bucket = "bucket_name"
-}
+  }
   ```
 - Create a output.tf file which shows you how to map(dynamically) data from data.tf file
   ```
