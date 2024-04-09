@@ -26,11 +26,11 @@ Pod can be created either using an imperative(command) method or declerative(man
   apiVersion: v1
   kind: Pod
   metadata:
-    name: nginx
+    name: myapp
     namespace: default
   spec:
     containers:
-    - name: nginx
+    - name: myapp-container
       image: nginx:1.14.2
       ports:
       - containerPort: 80
