@@ -51,8 +51,8 @@ Variables in Terraform allow users to parameterize their infrastructure code, ma
     region  = var.region
   }*/
 
-  resource "aws_instance" "web_server" {
-    ami           = var.ami
+  resource "aws_instance" "app_server" {
+    ami           = var.image
     instance_type = var.type
     tags = {
     Name = var.tag
