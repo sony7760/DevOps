@@ -10,30 +10,13 @@ It allows Terraform to dynamically gather information about existing resources o
   vim data.tf
   ```
   ```
-  data "aws_ami" "rhel" {
-    most_recent = true
-    owners = ["769417893008"]
-    filter {
-      name = "name"
-      values = ["redHat-*"]
-    }
-    filter {
-      name = "root-device-type"
-      values = ["ebs"]
-    }
-    filter {
-      name = "virtualization-type"
-      values = ["hvm"]
-    }
-    filter {
-      name = "architecture"
-      values = ["x86_64"]
-    }
-  }
+  data "aws_s3_bucket" "existing_bucket" {
+    bucket = "bucket_name"
+}
   ```
-- Create a ec2_1.tf file which shows you how to map data from data.tf file
+- Create a output.tf file which shows you how to map(dynamically) data from data.tf file
   ```
-  vim ec2_1.tf
+  vim output.tf
   ```
   ```
   /*terraform {
@@ -49,16 +32,17 @@ It allows Terraform to dynamically gather information about existing resources o
   provider "aws" {
     region  = "ap-south-1"
   }*/
-
-  resource "aws_instance" "app_server" {
-    ami           = data.aws_ami.rhel.id
-    instance_type = "t2.micro"
-    count = 2
-    key_name = "sony_aws"
-    vpc_security_group_ids = [aws_security_group.ssh-sg.id]
+  output "bucket_id" {
+    value = data.aws_s3_bucket.existing_bucket.id
   }
-  tags = {
-    Name = "app_server-${count.index + 1}"
+  output "bucket_arn" {
+    value = data.aws_s3_bucket.existing_bucket.arn
+  }
+  output "bucket_region" {
+    value = data.aws_s3_bucket.existing_bucket.region
+  }
+  output "bucket_domain_name" {
+    value = data.aws_s3_bucket.existing_bucket.bucket_domain_name
   }
   ```
 #### Deploy
