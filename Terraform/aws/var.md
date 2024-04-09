@@ -15,6 +15,16 @@ Variables in Terraform allow users to parameterize their infrastructure code, ma
   vim variable.tf
   ```
   ```
+  variable "region" {
+    type = string
+    default = "ap-south-1"
+  }
+  variable "tag" {
+    type = string
+    default = "frontend"
+  }
+  ```
+  ```
   terraform {
     required_providers {
       aws = {
