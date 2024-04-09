@@ -46,6 +46,7 @@ It allows Terraform to dynamically gather information about existing resources o
   provider "aws" {
     region  = "ap-south-1"
   }*/
+
   resource "aws_instance" "app_server" {
     ami           = data.aws_ami.rhel.id
     instance_type = "t2.micro"
@@ -57,3 +58,5 @@ It allows Terraform to dynamically gather information about existing resources o
     Name = "app_server-${count.index + 1}"
   }
   ```
+#### Deploy
+- Follow the [link](../README.md) to proceed with commands
