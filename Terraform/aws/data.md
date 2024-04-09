@@ -46,4 +46,14 @@ It allows Terraform to dynamically gather information about existing resources o
   provider "aws" {
     region  = "ap-south-1"
   }*/
+  resource "aws_instance" "app_server" {
+    ami           = data.aws_ami.rhel.id
+    instance_type = "t2.micro"
+    count = 2
+    key_name = "sony_aws"
+    vpc_security_group_ids = [aws_security_group.ssh-sg.id]
+  }
+  tags = {
+    Name = "app_server-${count.index + 1}"
+  }
   ```
