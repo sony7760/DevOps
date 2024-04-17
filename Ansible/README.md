@@ -13,6 +13,16 @@ Ansible Playbooks are YAML files that define a series of tasks to be executed on
 #### Facts
 In the context of Ansible, "facts gathering" refers to the process of collecting information about remote hosts or managed nodes. Ansible gathers these facts automatically when it connects to the remote hosts during playbook execution. These facts include details such as the operating system, hardware specifications, network configuration, installed packages, and more. Facts gathering is essential for understanding the state of the systems being managed and for making informed decisions during playbook execution
 
+#### Module Library
+The Ansible module library includes hundreds of built-in modules covering a wide range of use cases and technologies. These modules are organized into categories based on their functionality, making it easy to find and use the appropriate module for a given task. Some common categories of modules in the Ansible module library include,
+- **System:** Modules for managing system-related tasks such as managing files, users, groups, permissions, and system services
+- **Packaging:** Modules for installing, updating, and removing software packages on managed nodes
+- **Networking:** Modules for configuring network-related tasks such as managing network interfaces, routing, firewall rules, and DNS settings
+- **Cloud:** Modules for interacting with various cloud providers, including provisioning and managing cloud resources such as virtual machines, storage, and networks
+- **Database:** Modules for managing databases, including tasks such as creating, deleting, and managing database users and permissions
+- **Monitoring:** Modules for interacting with monitoring systems and collecting metrics and monitoring data from managed nodes
+- **Containers:** Modules for managing container-based environments and container orchestration platforms such as Docker and Kubernetes
+
 #### Files
 - Default inventory file
   ```
