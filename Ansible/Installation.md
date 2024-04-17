@@ -15,3 +15,7 @@ Ansible is an open-source tool and also it is packaged and maintained by the com
   ```
   apt install ansible -y
   ```
+- Verify installation
+  ```
+  ansible --version
+  ```
