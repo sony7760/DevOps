@@ -12,3 +12,17 @@ Ansible Playbooks are YAML files that define a series of tasks to be executed on
 
 #### Facts
 In the context of Ansible, "facts gathering" refers to the process of collecting information about remote hosts or managed nodes. Ansible gathers these facts automatically when it connects to the remote hosts during playbook execution. These facts include details such as the operating system, hardware specifications, network configuration, installed packages, and more. Facts gathering is essential for understanding the state of the systems being managed and for making informed decisions during playbook execution
+
+#### Files
+- Default inventory file
+  ```
+  /etc/ansible/hosts
+  ```
+- Config file, used if present
+  ```
+  /etc/ansible/ansible.cfg
+  ```
+- User config file, overrides the default config if present
+  ```
+  ~/.ansible.cfg
+  ```
