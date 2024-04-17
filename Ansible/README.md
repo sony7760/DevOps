@@ -3,3 +3,6 @@ Ansible is an open-source automation tool that simplifies configuration manageme
 
 #### Inventory file
 The Ansible inventory file is a configuration file that contains a list of hosts and groups of hosts. It helps Ansible determine the remote systems it should connect to. It can be in INI format or YAML format
+
+#### Playbook
+Ansible Playbooks are YAML files that define a series of tasks to be executed on remote hosts and and can be used for configuration management and application deployment
