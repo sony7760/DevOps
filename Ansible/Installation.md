@@ -19,3 +19,6 @@ Ansible is an open-source tool and also it is packaged and maintained by the com
   ```
   ansible --version
   ```
+
+#### Reference
+- Follow the official [Ansible doc](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu) to see more installation options
