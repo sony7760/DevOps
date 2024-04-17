@@ -9,3 +9,6 @@ An ad-hoc command in Ansible is a one-time command executed from the command lin
 
 #### Playbook
 Ansible Playbooks are YAML files that define a series of tasks to be executed on remote hosts and and can be used for configuration management and application deployment
+
+#### Facts
+In the context of Ansible, "facts gathering" refers to the process of collecting information about remote hosts or managed nodes. Ansible gathers these facts automatically when it connects to the remote hosts during playbook execution. These facts include details such as the operating system, hardware specifications, network configuration, installed packages, and more. Facts gathering is essential for understanding the state of the systems being managed and for making informed decisions during playbook execution
