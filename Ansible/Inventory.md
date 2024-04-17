@@ -4,6 +4,9 @@ Inventory file is a list or group of managed nodes and it can be created in many
 #### Example
 - A basic INI `/etc/ansible/hosts` might look like this
   ```
+  vim /etc/ansible/hosts
+  ```
+  ```
   mail.gloveline.com
 
   [webservers]
@@ -17,6 +20,9 @@ Inventory file is a list or group of managed nodes and it can be created in many
   ```
   
 - Here’s that same basic inventory file in YAML format
+  ```
+  vim  /etc/ansible/hosts.yml
+  ```
   ```
   ungrouped:
     hosts:
