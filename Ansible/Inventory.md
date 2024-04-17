@@ -39,4 +39,4 @@ Inventory file is a list or group of managed nodes and it can be created in many
   ```
 
 #### Refrence
-  - Check [Ansible official](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups) doc for more read
+  - Check [Ansible official](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups) doc for more details
