@@ -7,11 +7,11 @@ Ansible is an open-source tool and also it is packaged and maintained by the com
   apt update
   ```
   ```
-  apt install software-properties-common
+  apt install software-properties-common -y
   ```
   ```
   add-apt-repository --yes --update ppa:ansible/ansible
   ```
   ```
-  apt install ansible
+  apt install ansible -y
   ```
