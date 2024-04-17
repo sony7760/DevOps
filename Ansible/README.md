@@ -26,3 +26,16 @@ In the context of Ansible, "facts gathering" refers to the process of collecting
   ```
   ~/.ansible.cfg
   ```
+#### Variables
+- Override the default ansible inventory file
+  ```
+  ANSIBLE_INVENTORY
+  ```
+- Override the default ansible module library path
+  ```
+  ANSIBLE_LIBRARY
+  ```
+- Override the default ansible config file
+  ```
+  ANSIBLE_CONFIG
+  ```
