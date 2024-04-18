@@ -11,7 +11,7 @@ Install apache2 web server on Ubuntu
   vim web-inventory
   ```
   ```
-  [db]
+  [web]
   web	ansibile_host=192.168.56.251   ansible_connection=ssh  ansible_user=ubuntu ansible_become_pass=123456
   ```
   - Note that ansible_become_pass is the sudo password
