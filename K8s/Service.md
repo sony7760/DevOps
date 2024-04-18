@@ -92,3 +92,6 @@ Services enable connection between Pods, allowing for seamless communication bet
     ```
     Only <node-ip:Nodeport> will work assuming that <node-ip:Nodeport> is reachable
     ```
+#### Reference
+- Official [doc](https://kubernetes.io/docs/concepts/services-networking/service/) for declerative service reference
+- Official [doc](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose) for imperative service reference
