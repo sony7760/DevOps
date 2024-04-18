@@ -40,3 +40,6 @@ Copy a file from localhost to remote
   ```
   ansible-playbook -i web-inventory copy.yml
   ```
+
+#### Reference:
+- Visit Ansible [official doc](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html) for more examples
