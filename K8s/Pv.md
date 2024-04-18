@@ -32,4 +32,8 @@ PersistentVolumes provide a way to manage durable storage resources in Kubernete
   ```
   kubectl create -f pv.yml
   ```
+- Login to the worker node(in this case, it is node2) and create directory
+  ```
+  mkdir -p /mnt/disks/ssd1
+  ```
 - Check [PVC](./Pvc.md) doc for claiming the persistent volume for pod
