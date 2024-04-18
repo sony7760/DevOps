@@ -11,7 +11,7 @@ Service can be created either using an imperative(command) method or declerative
 - Syntax:
   - kubectl expose {resource_name} --port={port_number} --target-port={target_port_number}
 - Example
-  - Create a service for an mydeploy deployment, which serves on port 80 and connects to the containers on port 8000
+  - Create a service for the deployment resource `mydeploy`, which serves on port 80 and connects to the containers on port 8000
   ```
   kubectl expose deployment mydeploy --port=80 --target-port=8000
   ```
