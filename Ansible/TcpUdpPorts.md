@@ -23,17 +23,17 @@ Print all tcp/udp listening ports
   - gather_facts: true
     hosts: web
 
-  tasks:
-    - name: Collect Facts
-      listen_ports_facts:
+    tasks:
+      - name: Collect Facts
+        listen_ports_facts:
 
-    - name: List TCP Ports
-      debug:
-        msg: "{{ tcp_listen }}"
+      - name: List TCP Ports
+        debug:
+          msg: "{{ tcp_listen }}"
 
-    - name: List  UDP Ports
-      debug:
-        msg: "{{ udp_listen }}"
+      - name: List  UDP Ports
+        debug:
+          msg: "{{ udp_listen }}"
   ```
 - Execute playbook
   ```
