@@ -5,15 +5,15 @@ Services enable connection between Pods, allowing for seamless communication bet
 - **LoadBalancer:** Exposes the Service externally using a cloud provider's load balancer.
 - **ExternalName:** Maps the Service to a DNS name.
 ### Create service
-Pod can be created either using an imperative(command) method or declerative(manifest/defnition file) method
+Service can be created either using an imperative(command) method or declerative(manifest/defnition file) method
 
 **Imperative:**
 - Syntax:
-  - kubectl run {pod_name} image={container_image}
+  - kubectl expose {resource_name} --port={port_number} --target-port={target_port_number}
 - Example
-  - create the pod named myapp
+  - Create a service for an mydeploy deployment, which serves on port 80 and connects to the containers on port 8000
   ```
-  kubectl run myapp --image=nginx --namespace default
+  kubectl expose deployment mydeploy --port=80 --target-port=8000
   ```
 - Verify pod
   ```
