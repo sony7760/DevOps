@@ -48,3 +48,47 @@ Services enable connection between Pods, allowing for seamless communication bet
   ```
   curl <service_ip:port>
   ```
+- Create a definition file for Nodeport service
+  ```
+  vim nodeport.yml
+  ```
+  ```
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: my-npservice
+  spec:
+    type: NodePort
+    selector:
+      app: my-dep
+    ports:
+      - port: 80
+        targetPort: 80
+        nodePort: 30007
+  ```
+  ```
+  kubectl create -f nodeport.yml
+  ```
+- Verify service outside of the cluster
+  ```
+  curl 192.168.56.27:30007
+  ```
+#### Notes
+- These are the 3 things that will work
+  ```
+  curl <node-ip>:<node-port>
+  curl <service-ip>:<service-port>
+  curl <pod-ip>:<target-port>
+  ```
+  - You are inside the kubernetes cluster (you are a pod)
+    ```
+    <service-ip> and <pod-ip> and <node-ip> will work
+    ```
+  - You are on the node
+    ```
+    <service-ip> and <pod-ip> and <node-ip> will work
+    ```
+  - You are outside the node
+    ```
+    Only <node-ip:Nodeport> will work assuming that <node-ip:Nodeport> is reachable
+    ```
