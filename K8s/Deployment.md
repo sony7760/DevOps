@@ -28,7 +28,7 @@ Deployment can be created either using an imperative(command) method or declerat
   metadata:
     name: my-dep
     labels:
-      app: nginx
+      app: my-dep
   spec:
     replicas: 2
     selector:
@@ -37,7 +37,7 @@ Deployment can be created either using an imperative(command) method or declerat
     template:
       metadata:
         labels:
-          app: nginx
+          app: my-dep
       spec:
         containers:
         - name: nginx
