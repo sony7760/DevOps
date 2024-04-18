@@ -33,7 +33,7 @@ Deployment can be created either using an imperative(command) method or declerat
     replicas: 2
     selector:
       matchLabels:
-        app: nginx
+        app: my-dep
     template:
       metadata:
         labels:
