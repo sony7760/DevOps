@@ -15,32 +15,35 @@ Service can be created either using an imperative(command) method or declerative
   ```
   kubectl expose deployment mydeploy --port=80 --target-port=8000
   ```
-- Verify pod
+- Verify service
   ```
-  kubectl get pods -n  default
+  kubectl get services -n  default
   ```
 ### OR
 **Declerative:**
-- Create a definition file
+- Create a definition file for ClusterIP service
   ```
-  vim my-pod.yml
+  vim my-service.yml
   ```
   ```
   apiVersion: v1
-  kind: Pod
+  kind: Service
   metadata:
-    name: myapp
-    namespace: default
+    name: my-service
   spec:
-    containers:
-    - name: myapp-container
-      image: nginx:1.14.2
-      ports:
-      - containerPort: 80
+    selector:
+      app: my-dep
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 80
   ```
   ```
-  kubectl create -f my-pod.yml
-- Verify pod
+  kubectl create -f my-service.yml
+- Verify service
   ```
-  kubectl get pods -n  default
+  kubectl get services -o wide
+  ```
+  ```
+  curl <service_ip:port>
   ```
