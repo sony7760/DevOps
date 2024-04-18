@@ -5,7 +5,8 @@ Services enable connection between Pods, allowing for seamless communication bet
 - **LoadBalancer:** Exposes the Service externally using a cloud provider's load balancer.
 - **ExternalName:** Maps the Service to a DNS name.
 ### Create service
-Service can be created either using an imperative(command) method or declerative(manifest/defnition file) method
+- Service can be created either using an imperative(command) method or declerative(manifest/defnition file) method
+- Create a [deployment](./Deployment.md) for testing service
 
 **Imperative:**
 - Syntax:
