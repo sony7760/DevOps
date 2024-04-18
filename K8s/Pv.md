@@ -10,7 +10,7 @@ PersistentVolumes provide a way to manage durable storage resources in Kubernete
   apiVersion: v1
   kind: PersistentVolume
   metadata:
-    name: example-pv
+    name: mypv
   spec:
     capacity:
       storage: 200Mi
