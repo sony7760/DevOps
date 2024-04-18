@@ -42,4 +42,4 @@ This is an example pod which consume the volume crated by [PV](./Pv.md)
   ```
   exit
   ```
--  Check index.html on node(where you created the directory "/mnt/disks/ssd1/")
+-  Check for the file index.html on node(where you created the directory "/mnt/disks/ssd1/")
