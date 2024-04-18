@@ -13,7 +13,7 @@ An ad-hoc command in Ansible is a one-time command executed from the command lin
   - `-b` uses become to execute with elevated privileges
   - `-K` prompts for the privilege escalation password
 - To uninstall apche2, change the state  present => absent
-- Refer [ping](./Ping.md) and [uptime](./Uptime.md) docs to refer more example
+- Check [ping](./Ping.md) and [uptime](./Uptime.md) docs to refer more example
 
 #### Reference
 - Visit [link](https://www.linkedin.com/pulse/day-56-understanding-ad-hoc-commands-ansible-sayali-shewale/) to see more third-party examples
