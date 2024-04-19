@@ -13,7 +13,7 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
   - **Environment variables:** Used within Ansible playbooks to access environment variables from the system running the playbook or from remote systems
 
 #### Examples
-- Create a simple playbook yaml variable
+- Create a simple playbook yaml variable example
   ```
   vim variables-inventory
   ```
@@ -42,18 +42,33 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
   ```
   ansible-playbook -i variables-inventory simple-var.yml
   ```
-- Create a file variable
+- Create a file variable example
   ```
   vim user_vars.yml
   ```
   ```
   user_details:
-    - { name: testuser1, uid: 1002, groups: "admin, logs" }
-    - { name: testuser2, uid: 1003, groups: logs: }
+    - { name: testuser1, uid: 6002, groups: "adm, sys" }
+    - { name: testuser2, uid: 6003, groups: adm }
   ```
   ```
   vim users.yml
   ```
   ```
-  
+  - name: Add users
+    hosts: db
+    become: true
+    vars_files:
+        - /root/ansible/vars/variables.yml
+    tasks:
+        - name: Add several users
+          user:
+           name: "{{ item.name }}"
+           uid: "{{ item.uid }}"
+           groups: "{{ item.groups }}"
+           state: present
+          with_items: "{{ user_details }}"
+  ```
+  ```
+  ansible-playbook -i variables-inventory users.yml
   ```
