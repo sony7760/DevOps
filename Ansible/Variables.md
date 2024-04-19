@@ -11,3 +11,9 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
   - **Role variables:** Defined within a role, these variables are usually part of the role’s default variables (defaults/main.yaml file) or variables intended to be set by the role user (vars/main.yaml file) and are used to enable reusable and configurable roles
   - **Magic variables:** Special variables such as hostvars, group_names, groups, inventory_hostname, and ansible_playbook_python, provide information about the execution context and allow access to inventory data programmatically
   - **Environment variables:** Used within Ansible playbooks to access environment variables from the system running the playbook or from remote systems
+
+#### Examples
+- Create a simple yaml variable
+  ```
+  vim 
+  ```
