@@ -39,3 +39,6 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
         name: "{{ username }}"
         state: present
   ```
+  ```
+  ansible-playbook -i variables-inventory simple-var.yml
+  ```
