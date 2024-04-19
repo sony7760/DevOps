@@ -9,7 +9,7 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
   - **Inventory variables:** These variables are defined in the inventory file itself and can be applied at different levels (host, group, all groups)
   - **Fact variables:** Gathered by Ansible from the target machines, facts are a rich set of variables (including IP addresses, operating system, disk space, etc.) that represent the current state of the system and are automatically discovered by Ansible
   - **Role variables:** Defined within a role, these variables are usually part of the role’s default variables (defaults/main.yaml file) or variables intended to be set by the role user (vars/main.yaml file) and are used to enable reusable and configurable roles
-  - **Magic variables:** Special variables such as hostvars, group_names, groups, inventory_hostname, and ansible_playbook_python, provide information about the execution context and allow access to inventory data programmatically
+  - **Magic variables:** Special variables such as hostvars, group_names, groups, inventory_hostname, and ansible_playbook_python, provide information about the execution context and allow access to inventory data programmatically. Magic variables are automatically created by Ansible and cannot be changed by a user
   - **Environment variables:** Used within Ansible playbooks to access environment variables from the system running the playbook or from remote systems
 
 #### Examples
