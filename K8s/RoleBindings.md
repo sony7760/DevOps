@@ -20,7 +20,7 @@ Rolebinding can be created either using an imperative(command) method or declera
 **Declerative:**
 - Create a definition file
 ```
-root@k8snode:~# vim developer-binding-myuser.yml
+vim developer-binding-myuser.yml
 ```
 ```
 apiVersion: rbac.authorization.k8s.io/v1
