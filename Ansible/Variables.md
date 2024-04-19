@@ -15,5 +15,27 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
 #### Examples
 - Create a simple yaml variable
   ```
-  vim 
+  vim variables-inventory
+  ```
+  ```
+  [db]
+  192.168.56.27
+  [web]
+  192.168.56.26
+  ```
+  ```
+  vim simple-var.yml
+  ```
+  ```
+  - name: Example Simple Variable
+    hosts: all
+    become: yes
+    vars:
+      username: bob
+
+    tasks:
+    - name: Add the user {{ username }}
+      ansible.builtin.user:
+        name: "{{ username }}"
+        state: present
   ```
