@@ -59,7 +59,7 @@ Ansible variables are dynamic values used within Ansible playbooks and roles to 
     hosts: db
     become: true
     vars_files:
-        - /root/ansible/vars/variables.yml
+        - /root/ansible/user_vars.yml
     tasks:
         - name: Add several users
           user:
