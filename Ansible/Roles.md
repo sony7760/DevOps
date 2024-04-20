@@ -118,3 +118,30 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
    </body>
   </html>
   ```
+- Add metadata and information about the role
+  ```
+  vim meta/main.yml
+  ```
+  ```
+  galaxy_info:
+    author: Jerry
+    description: Installs Nginx and host a sample website
+    company: Gloveline
+    license: Apache-2.0
+    role_name: webserver
+    min_ansible_version: "2.1"
+
+    platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - jellyfish
+ 
+    galaxy_tags:
+      - nginx
+      - webserver
+      - development
+      - test
+ 
+  dependencies: []
+  ```
