@@ -20,6 +20,9 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Head to the tasks directory and edit the main.yml file to add play & tasks
   ```
+  vim tasks/main.yml
+  ```
+  ```
   ---
   # tasks file for webserver
   - name: Update and upgrade apt
