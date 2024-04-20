@@ -76,3 +76,15 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   # vars file for webserver
   nginx_custom_directory: /var/www/ubuntu/nginx
   ```
+- In the handlers directory, if define any handler that is triggered by the tasks
+  ```
+  vim handlers/main.yml
+  ```
+  ```
+  ---
+  # handlers file for webserver
+  - name: Restart the Nginx service
+    service:
+      name: nginx
+      state: restarted
+  ```
