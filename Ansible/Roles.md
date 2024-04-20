@@ -4,7 +4,10 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
 #### Examples
 - Createt inventory file
   ```
-  vim roles-inventory
+  mkdir -p /root/ansible/roles
+  ```
+  ```
+  vim /root/ansible/roles/roles-inventory
   ```
   ```
   [db]
@@ -14,23 +17,17 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Initialize a new role named webserver
   ```
-  mkdir -p /root/ansible/roles
-  ```
-  ```
   cd /root/ansible/roles
   ```
   ```
   ansible-galaxy init webserver
   ```
   ```
-  cd webserver
-  ```
-  ```
-  ls
+  ls webserver/
   ```
 - Head to the tasks directory and edit the main.yml file to add play & tasks
   ```
-  vim tasks/main.yml
+  vim webserver/tasks/main.yml
   ```
   ```
   ---
@@ -69,7 +66,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Set default values for the variables used in the tasks
   ```
-  vim defaults/main.yml
+  vim webserver/defaults/main.yml
   ```
   ```
   ---
@@ -79,7 +76,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Override the default variable that defines in the defaults/main.yml file
   ```
-  vim vars/main.yml
+  vim webserver/vars/main.yml
   ```
   ```
   ---
@@ -88,7 +85,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - In the handlers directory, if define any handler that is triggered by the tasks
   ```
-  vim handlers/main.yml
+  vim webserver/handlers/main.yml
   ```
   ```
   ---
@@ -100,7 +97,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - In the templates directory, it leverage a Jinja2 template file for the Nginx configuration
   ```
-  vim templates/nginx.conf.j2
+  vim webserver/templates/nginx.conf.j2
   ```
   ```
   server {
@@ -115,7 +112,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Define a static file index.html
   ```
-  vim files/index.html
+  vim webserver/files/index.html
   ```
   ```
   <html>
@@ -130,7 +127,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Add metadata and information about the role
   ```
-  vim meta/main.yml
+  vim webserver/meta/main.yml
   ```
   ```
   galaxy_info:
@@ -157,7 +154,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Finally, update the README.md file
   ```
-  vim README.md
+  vim webserver/README.md
   ```
   ```
   ## About
