@@ -145,3 +145,24 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
  
   dependencies: []
   ```
+- Finally, update the README.md file
+  ```
+  vim README.md
+  ```
+  ```
+  ## About
+  This is a role created for demonstration purposes
+
+  #### Requirements
+  - Ansible
+  - Jinja2
+
+  #### Example playbook
+  ```
+  ---
+  hosts: db
+  become: true
+  roles:
+    - webserver
+  ```
+  ```
