@@ -103,3 +103,18 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
           }
   }
   ```
+- Define a static file index.html
+  ```
+  vim files/index.html
+  ```
+  ```
+  <html>
+   <head>
+     <title>GloveLine Web Site. Powered By Nginx </title>
+   </head>
+   <body>
+   <h1>This is the default website</h1>
+   <p>The website was deployed by Ansible</p>
+   </body>
+  </html>
+  ```
