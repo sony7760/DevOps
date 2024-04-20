@@ -173,5 +173,5 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
 - Execute play
   ```
-  ansible-play myplay.yml
+  ansible-playbook -i roles-inventory myplay.yml
   ```
