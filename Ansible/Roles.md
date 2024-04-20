@@ -74,5 +74,5 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
   ---
   # vars file for webserver
-  nginx_custom_directory: /home/ubuntu/nginx
+  nginx_custom_directory: /var/www/ubuntu/nginx
   ```
