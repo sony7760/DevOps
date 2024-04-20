@@ -57,3 +57,13 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
       dest: "{{ nginx_custom_directory }}/index.html"
     notify: Restart the Nginx service
   ```
+- Set default values for the variables used in the tasks
+  ```
+  vim defaults/main.yml
+  ```
+  ```
+  ---
+  # defaults file for webserver
+  nginx_version: 1.18.0-0ubuntu1.3
+  nginx_custom_directory: /var/www/sample
+  ```
