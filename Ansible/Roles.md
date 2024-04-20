@@ -67,3 +67,12 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   nginx_version: 1.18.0-0ubuntu1.3
   nginx_custom_directory: /var/www/sample
   ```
+- Override the default variable that defines in the defaults/main.yml file
+  ```
+  vim vars/main.yml
+  ```
+  ```
+  ---
+  # vars file for webserver
+  nginx_custom_directory: /home/ubuntu/nginx
+  ```
