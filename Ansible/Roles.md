@@ -157,10 +157,14 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   - Ansible
   - Jinja2
 
-  #### Example playbook
+  #### Example playbook, add below contents to the file myplay.yml
   ---
   hosts: db
   become: true
   roles:
     - webserver
+  ```
+- Execute play
+  ```
+  ansible-play myplay.yml
   ```
