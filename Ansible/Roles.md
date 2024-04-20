@@ -88,3 +88,18 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
       name: nginx
       state: restarted
   ```
+- In the templates directory, it leverage a Jinja2 template file for the Nginx configuration
+  ```
+  vim templates/nginx.conf.j2
+  ```
+  ```
+  server {
+          listen 80;
+          listen [::]:80;
+          root {{ nginx_custom_directory }};
+          index index.html;
+          location / {
+                  try_files $uri $uri/ =404;
+          }
+  }
+  ```
