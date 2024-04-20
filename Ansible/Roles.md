@@ -158,11 +158,9 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   - Jinja2
 
   #### Example playbook
-  ```
   ---
   hosts: db
   become: true
   roles:
     - webserver
-  ```
   ```
