@@ -47,12 +47,23 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
     template:
       src: templates/nginx.conf.j2
       dest: /etc/nginx/sites-available/default
+  
   - name: Create link to the new config to enable it
     file:
       dest: /etc/nginx/sites-enabled/default
       src: /etc/nginx/sites-available/default
       state: link
- 
+  
+  - name: Delete document root if already exist
+    ansible.builtin.file:
+    state: absent
+    path: "{{ nginx_custom_directory }}"
+
+  - name: Start Nginx service
+    service:
+      name: nginx
+      state: started
+  
   - name: Create document root
     ansible.builtin.file:
       path: "{{ nginx_custom_directory }}"
@@ -117,9 +128,6 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
   ```
   <html>
-   <head>
-     <title>GloveLine Web Site. Powered By Nginx </title>
-   </head>
    <body>
    <h1>This is the default website</h1>
    <p>The website was deployed by Ansible</p>
