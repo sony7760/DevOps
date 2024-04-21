@@ -102,8 +102,8 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   ```
   ```
   server {
-          listen 80;
-          listen [::]:80;
+          listen 70;
+          listen [::]:70;
           root {{ nginx_custom_directory }};
           index index.html;
           location / {
