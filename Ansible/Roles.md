@@ -175,10 +175,11 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
 
   #### Example playbook, add below contents to the file myplay.yml
   ---
-  hosts: db
-  become: true
-  roles:
-    - webserver
+  - gather_facts: true
+    hosts: db
+    become: true
+    roles:
+      - webserver
   ```
 - Execute play
   ```
