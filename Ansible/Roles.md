@@ -74,6 +74,7 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   nginx_version: 1.18.0-0ubuntu1.3
   nginx_custom_directory: /var/www/sample
   ```
+  - Run `apt-cache policy nginx` to get available nginx candidate if the version mentioned above is not working
 - Override the default variable that defines in the defaults/main.yml file
   ```
   vim webserver/vars/main.yml
