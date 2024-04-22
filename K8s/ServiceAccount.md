@@ -30,7 +30,7 @@ ServiceAccount can be created either using an imperative(command) method or decl
     namespace: default
   ```
   ```
-  kubectl create -f vim my-svc-account.yml
+  kubectl create -f my-svc-account.yml
   ```
 - Verify service  accounts
   ```
