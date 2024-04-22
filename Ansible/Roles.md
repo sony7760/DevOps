@@ -56,8 +56,8 @@ Ansible Roles provide a well-defined framework and structure for setting tasks, 
   
   - name: Delete document root if already exist
     ansible.builtin.file:
-    state: absent
-    path: "{{ nginx_custom_directory }}"
+      state: absent
+      path: "{{ nginx_custom_directory }}"
 
   - name: Start Nginx service
     service:
