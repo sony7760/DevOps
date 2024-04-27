@@ -53,3 +53,6 @@ _**Reference:**_  https://faculty.cs.niu.edu/~hutchins/csci480/signals.htm
 - **Running (R), Sleeping (S), Stopped (T), Zombie (Z):**
   - Processes go through various states during their lifecycle.
   - Zombie processes are terminated but still have an entry in the process table.
+
+#### References
+- Process priority(PR, NI etc..): https://www.tecmint.com/set-linux-process-priority-using-nice-and-renice-commands/
