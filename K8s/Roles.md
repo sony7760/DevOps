@@ -20,7 +20,7 @@ Role can be created either using an imperative(command) method or declerative(ma
 **Declerative:**
 - Create a definition file
 ```
-root@k8snode:~# vim developer.yml
+vim developer.yml
 ```
 ```
 apiVersion: rbac.authorization.k8s.io/v1
