@@ -8,7 +8,7 @@ openssl genrsa -out myuser.key 2048
 ```
 openssl req -new -key myuser.key -out myuser.csr -subj "/CN=myuser"
 ```
-### Create a CertificateSigningRequest
+### Create a CertificateSigningRequest in K8s
 - Copy the CSR file content from the output of the command given below
 ```
 cat myuser.csr | base64 | tr -d "\n"
