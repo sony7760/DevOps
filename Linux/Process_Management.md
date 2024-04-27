@@ -36,6 +36,8 @@ _**Reference:**_ https://www.javatpoint.com/fork-vs-exec
     ```
     root@node1~#kill -9 1734
     ```
+
+_**Reference:**_  https://faculty.cs.niu.edu/~hutchins/csci480/signals.htm
 ### Background and Foreground Execution:
 - **Background Execution:**
   - Adding `&` at the end of a command runs it in the background.
