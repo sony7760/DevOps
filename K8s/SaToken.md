@@ -14,7 +14,7 @@ Token can be created either using an imperative(command) method or declerative(m
   ```
 - Verify service  accounts
   ```
-  kubectl describe serviceaccount my-service-account
+  kubectl describe serviceaccount my-svc-account
   ```
 ### OR
 **Declerative:**
@@ -28,12 +28,12 @@ Token can be created either using an imperative(command) method or declerative(m
   metadata:
     name: my-service-account-token
     annotations:
-      kubernetes.io/service-account.name: my-service-account
+      kubernetes.io/service-account.name: my-svc-account
   type: kubernetes.io/service-account-token
   ```
   ```
   kubectl create -f my-service-account-token.yml
   ```
   ```
-  kubectl describe serviceaccount my-service-account
+  kubectl describe serviceaccount my-svc-account
   ```
