@@ -46,3 +46,9 @@ Ingress is an K8s API object that helps expose applications and manage external 
   ```
   kubectl get all -n ingress-nginx
   ```
+
+#### Test
+- Download deployments, services, and ingress yamls
+  ```
+  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/
+  ```
