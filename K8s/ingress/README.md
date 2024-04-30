@@ -22,5 +22,5 @@ Ingress is an K8s API object that helps expose applications and manage external 
 #### Configure IPAddressPool
 - Create a manifest file
   ```
-  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/metallb/
+  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/metallb/ip-adress-pool.yaml
   ```
