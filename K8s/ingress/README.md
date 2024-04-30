@@ -79,7 +79,7 @@ Ingress is an K8s API object that helps expose applications and manage external 
   ```
   192.168.56.200  foo.bar.com
   ```
-- Browse for the URL  paths foo.bar.com/foo and foo.bar.com/bar
+- Browse the URL paths for foo.bar.com/foo and foo.bar.com/bar
 - Change index.html file content of each application to see the difference clearly
 
 #### Reference
