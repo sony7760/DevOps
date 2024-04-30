@@ -36,5 +36,13 @@ Ingress is an K8s API object that helps expose applications and manage external 
 #### Configure Nginx Ingress Controller
 - Download a manifest file
   ```
-  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/
+  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/controller/controller-deploy.yaml
+  ```
+- Deploy the manifest file
+  ```
+  kubectl apply -f controller-deploy.yaml
+  ```
+- Validate the resources and make sure the service(Type: Loadbalancer) have External IP is associated(From the IpAddressPool range)
+  ```
+  kubectl get all -n ingress-nginx
   ```
