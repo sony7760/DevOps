@@ -6,7 +6,7 @@ Ingress is an K8s API object that helps expose applications and manage external 
 - **Ingress(HTTP/S Rules):** To access the backend service, we need create an [ingress resource](./manifests/demo_ingress.yaml) with the rules. Note that Ingress rules must reside in the namespace where the application reside.
 
 #### Configure MetalLB
-- Create a manifest file
+- Download a manifest file
   ```
   curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/metallb/metallb.yaml
   ```
@@ -14,13 +14,27 @@ Ingress is an K8s API object that helps expose applications and manage external 
   ```
   kubectl apply -f metallb.yaml
   ```
-- Validate the deployment has initialized Deployment(controller), Deamonset(speaker), and Service accounts with the RBAC permissions
+- Validate that it has initialized Deployment(controller), Deamonset(speaker), and Service accounts with the RBAC permissions
   ```
   kubectl get  -n metallb-system
   ```
 
 #### Configure IPAddressPool
-- Create a manifest file
+- Download a manifest file
   ```
   curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/metallb/ip-adress-pool.yaml
+  ```
+- Deploy the manifest file
+  ```
+  kubectl apply -f ip-adress-pool.yaml
+  ```
+- Validate the IP pool range
+  ```
+  kubectl get IPAddressPool -n metallb-system
+  ```
+
+#### Configure Nginx Ingress Controller
+- Download a manifest file
+  ```
+  curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/
   ```
