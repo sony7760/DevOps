@@ -8,5 +8,5 @@ Ingress is an K8s API object that helps expose applications and manage external 
 #### Configure MetalLB
 - Create a manifest file
   ```
-  curl -O metallb.yml https://github.com/sony7760/DevOps/blob/main/K8s/ingress/metallb/metallb.yaml
+  curl -O metallb.yaml https://github.com/sony7760/DevOps/blob/main/K8s/ingress/metallb/metallb.yaml
   ```
