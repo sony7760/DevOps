@@ -1,7 +1,7 @@
 #### Ingress
 Ingress is an K8s API object that helps expose applications and manage external access by providing http/s routing rules to the services within a Kubernetes cluster. The main steps to expose a service on a Kubernetes cluster(On-Premise) thru ingress are,
 - **MetalLB:** a load balancer, to redirect incoming traffic to the node hosting the pods. This is done by applying a [manifest](./metallb/metallb.yaml) to create the necessary components in the cluster, including the controller and speaker pods
-- **IPAddressPool:** Create an IPAddressPool, [which](./metallb/ip-adress-pool.yaml) specifies the range of IP addresses that the load balancer can use
+- **IPAddressPool:** Create an IPAddressPool, [which](./metallb/ip-adress-pool.yaml) specifies the range of IP addresses that the load balancer can use. Please note that you may need to assign the same range as your worker node’s Ip addresses
 - **Ingress Controller:** Install Nginx Ingress Controller to handle external traffic and load balance it to reach the various pods in the cluster. This is done by applying a [YAML file](./contoller/controller-deploy.yaml) to deploy the controller
 - **Ingress(HTTP/S Rules):** To access the backend service, we need create an [ingress resource](./manifests/demo_ingress.yaml) with the rules. Note that Ingress rules must reside in the namespace where the application reside.
 
@@ -81,3 +81,7 @@ Ingress is an K8s API object that helps expose applications and manage external 
   ```
 - Browse for the URL  paths foo.bar.com/foo and foo.bar.com/bar
 - Change index.html file content of each application to see the difference clearly
+
+#### Reference
+- Link to the [official doc](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- Link to the [third-party doc](https://medium.com/@tanmaybhandge/simplifying-service-exposure-in-on-premises-kubernetes-cluster-using-ingress-controller-39ed8cd9fa93)
