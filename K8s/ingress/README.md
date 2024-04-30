@@ -58,3 +58,26 @@ Ingress is an K8s API object that helps expose applications and manage external 
   ```
   curl -O https://raw.githubusercontent.com/sony7760/DevOps/main/K8s/ingress/manifests/demo_ingress.yaml
   ```
+- Deploy the manifest files
+  ```
+  kubectl apply -f deployment_service.yaml
+  ```
+  ```
+  kubectl apply -f demo_deployment_service.yaml
+  ```
+  ```
+  kubectl apply -f demo_ingress.yaml
+  ```
+- Make sure the External Ip address(From the IpAddressPool) has assigned to ingress. Please note that it may take few minutes to assign  IP
+  ```
+  kubectl get ingress
+  ```
+
+#### Misc
+- Add the ingress External IP address to your localhost's /etc/hosts file to browse the app
+- Example:
+  ```
+  192.168.56.200  foo.bar.com
+  ```
+- Browse for the URL  paths foo.bar.com/foo and foo.bar.com/bar
+- Change index.html file content of each application to see the difference clearly
