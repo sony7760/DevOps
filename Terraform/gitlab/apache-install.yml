@@ -1,0 +1,13 @@
+---
+- name: Install web server
+  hosts: all
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+
+  tasks:
+  - name: Ensure apache is at the latest version
+    ansible.builtin.apt:
+      name: apache2
+      update_cache: yes
+      state: latest
