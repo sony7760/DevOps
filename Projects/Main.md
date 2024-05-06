@@ -34,3 +34,19 @@ This project is for architecting and implementing a DevOps practice for a growin
 **Container Registry - GitLab:**
 - Set up a private container registry within GitLab for storing Docker images
 - Enable Docker image pull actions from the K8s
+
+### Project Deliverables
+**Project Plan and Architecture Design Document:**
+- Detailed plan outlining the project scope, objectives, timeline, and resource requirements
+- Architecture diagram depicting the CI/CD pipeline workflow, AWS infrastructure layout, and Kubernetes cluster architecture
+
+**Source Code Repository:**
+-  GitLab repository containing the application code, infrastructure configurations, and CI/CD pipeline scripts
+
+**Documentation and User Guides:**
+- Comprehensive documentation covering setup instructions, usage guidelines, and troubleshooting procedures for the CI/CD pipeline and associated tools
+
+**Demo and Presentation:**
+- Live demonstration of the implemented CI/CD pipeline showcasing automated build, test, and deployment processes
+- Presentation summarizing the project goals, challenges, solutions, and key learnings
+
