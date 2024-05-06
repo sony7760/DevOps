@@ -50,3 +50,12 @@ This project is for architecting and implementing a DevOps practice for a growin
 - Live demonstration of the implemented CI/CD pipeline showcasing automated build, test, and deployment processes
 - Presentation summarizing the project goals, challenges, solutions, and key learnings
 
+### Evaluation Criteria:
+- Effectiveness of the CI/CD pipeline in automating the software delivery lifecycle
+- Efficiency and scalability of the AWS infrastructure provisioning and management
+- Reliability and maintainability of the Kubernetes-based deployment platform
+- Integration and interoperability of DevOps tools within the project ecosystem
+- Documentation quality and clarity of presentation during the demo
+
+#### Notes
+- You are encouraged to explore additional features and optimizations beyond the specified components to enhance the project's functionality and performance
