@@ -35,7 +35,7 @@ Install apache2 web server on Ubuntu
         update_cache: yes
         state: latest
   ```
-- Execute playbook
+- Execute playbook (-kK will prompt for sudo password)
   ```
   ansible-playbook -i web-inventory apache-install.yml -kK
   ```
