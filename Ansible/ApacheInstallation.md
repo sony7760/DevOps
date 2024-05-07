@@ -37,5 +37,5 @@ Install apache2 web server on Ubuntu
   ```
 - Execute playbook
   ```
-  ansible-playbook -i web-inventory apache-install.yml --ask-pass
+  ansible-playbook -i web-inventory apache-install.yml -kK
   ```
