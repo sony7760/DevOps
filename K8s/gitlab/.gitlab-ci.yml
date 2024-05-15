@@ -1,0 +1,47 @@
+stages:
+  - build
+  - test
+  - packsage
+  - deploy
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
+.k8s_auth: &kubeauth
+  - export KUBE_VERSION=$(curl https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+  - echo $KUBE_VERSION
+  - curl -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/"${KUBE_VERSION}"/bin/linux/amd64/kubectl
+  - chmod a+x /usr/local/bin/kubectl
+  - mkdir -p ~/.kube
+  - cat $KUBE_CONFIG > ~/.kube/config
+  - chown $(id -u):$(id -g) $HOME/.kube/config
+  # Change Ip address and master hostname
+  - echo "192.168.56.28   k8smaster" >>/etc/hosts 
+
+app_build:
+  stage: build
+  script:
+    - echo "Modify app build later"
+  tags:
+    - docker
+    - container
+
+app_test:
+  stage: test
+  image: maven:latest
+  script:
+    - *kubeauth
+    - kubectl get nodes
+  tags:
+    - docker
+    - container
+
+app_deploy:
+  stage: deploy
+  image: maven:latest
+  script:
+    - *kubeauth
+    - kubectl apply -f k8s/
+  tags:
+    - kubernetes
