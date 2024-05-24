@@ -157,11 +157,17 @@ All of these steps given below is applicable for all the cluster nodes.
   ```
 
 ### Initialize Master(primary control-plane) node
-- Initialize the cluster includes the cluster network option
+- Initialize the cluster includes the pod network option
   ```
   kubeadm init --apiserver-advertise-address=192.168.56.21 --control-plane-endpoint=master --upload-certs --pod-network-cidr=10.12.0.0/16
   ```
-  - Check [file](./misc/kubeadm_init_output.md) to see the ouput when the initialization is succeed 
+**OR**
+- Run the below command if you want initialize the cluster with public IP of AWS EC2 instance
+  ```
+  kubeadm init  --apiserver-cert-extra-sans=18.181.194.59 --control-plane-endpoint=18.181.194.59:6443 --upload-certs --pod-network-cidr=10.12.0.0/16
+  ```
+  - change IP address to your EC2 public address
+- Check [file](./misc/kubeadm_init_output.md) to see the ouput when the initialization is succeed 
 - Configure kubectl on master node to access your cluster. **Note:-** kubectl utility can be used from any of the machine(which should have network connectivity to cluster) outside the cluster by copying the certs.
   ```
   mkdir -p $HOME/.kube
