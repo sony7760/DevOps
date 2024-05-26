@@ -13,7 +13,7 @@ Print all tcp/udp listening ports
   [web]
   web	ansibile_host=192.168.56.251   ansible_connection=ssh  ansible_user=root
   ```
-- Create playbook yml file for installing curl
+- Create playbook yml file to print ports
   ```
   vim tcpudp-ports.yml
   ```
