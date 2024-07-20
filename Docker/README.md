@@ -5,3 +5,10 @@ Docker container technology was launched in 2013 as an open source [Docker Engin
 - **Docker CLI:** The most popular way to interface with Docker containers is the Docker CLI – a simple, yet powerful client that greatly simplifies how you manage container instances through a clear set of commands.
 
 ![](../Linux/images/Docker.png)
+
+## Container Vs Virtual Machines
+Containers and virtual machines have similar resource isolation and allocation benefits, but function differently because containers virtualize the operating system instead of hardware. Containers are more portable and efficient.
+- **Containers:** Containers are an abstraction at the app layer that packages code and dependencies together. Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space. Containers take up less space than VMs (container images are typically tens of MBs in size), can handle more applications and require fewer VMs and Operating systems.
+- **Virtual Machines:** Virtual machines (VMs) are an abstraction of physical hardware turning one server into many servers. The hypervisor allows multiple VMs to run on a single machine. Each VM includes a full copy of an operating system, the application, necessary binaries and libraries – taking up tens of GBs. VMs can also be slow to boot.
+
+![](../Linux/images/DockerVsVm.png)
