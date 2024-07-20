@@ -4,4 +4,4 @@ Docker container technology was launched in 2013 as an open source [Docker Engin
 - **Integrated BuildKit:** BuildKit is an open source tool that takes the instructions from a Dockerfile and ‘builds” a Docker image. This process can take a long time so BuildKit provides several architectural enhancements that makes it much faster, more precise and portable.
 - **Docker CLI:** The most popular way to interface with Docker containers is the Docker CLI – a simple, yet powerful client that greatly simplifies how you manage container instances through a clear set of commands.
 
-![](../Linux/images/lvm.png)
+![](../Linux/images/Docker.png)
