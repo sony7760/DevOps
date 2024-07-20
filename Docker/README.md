@@ -1,2 +1,5 @@
 ## Docker
-Docker container technology was launched in 2013 as an open source [Docker Engine](https://www.docker.com/products/container-runtime/)(Container Runtime). It is a universal packaging approach that bundles up all application dependencies inside a container which is then run on Docker Engine
+Docker container technology was launched in 2013 as an open source [Docker Engine](https://www.docker.com/products/container-runtime/)(Container Runtime). It is a universal packaging approach that bundles up all application dependencies inside a container which is then run on Docker Engine.
+- **Powered by containerd:** Built on the leading open source container runtime, a graduated project of the Cloud Native Computing Foundation (CNCF). Containerd implements Kubernetes Container Runtime Interface (CRI) and is widely adopted across public clouds and enterprises.
+- **Integrated BuildKit:** BuildKit is an open source tool that takes the instructions from a Dockerfile and ‘builds” a Docker image. This process can take a long time so BuildKit provides several architectural enhancements that makes it much faster, more precise and portable.
+- **Docker CLI:** The most popular way to interface with Docker containers is the Docker CLI – a simple, yet powerful client that greatly simplifies how you manage container instances through a clear set of commands.
