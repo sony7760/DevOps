@@ -45,5 +45,5 @@ docker images
 docker rmi <image_name> or <image_id>
 ```
 
-####Reference:
+#### References:
 - Cheat Sheet: https://docs.docker.com/get-started/docker_cheatsheet.pdf
