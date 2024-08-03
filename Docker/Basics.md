@@ -17,13 +17,33 @@ docker ps
 docker ps -a
 ```
 **Run a docker container**
+
+Syntax:
 ```
 docker run --name <container_name> <image_name>
 ```
+Example:
 ```
 docker run --name myapp nginx:latest
+```
+**Delete a container**
+
+Syntax:
+```
+docker rm <container_name> OR <container_id>
+```
+Example:
+```
+docker rm myapp
 ```
 **List docker images**
 ```
 docker images
 ```
+**Delete docker image**
+```
+docker rmi <image_name> or <image_id>
+```
+
+####Reference:
+- Cheat Sheet: https://docs.docker.com/get-started/docker_cheatsheet.pdf
