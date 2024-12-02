@@ -1,0 +1,20 @@
+- What is GitLab CI/CD, and how does it work?
+- How can you set up a GitLab runner on your machine?
+- What is the purpose of the .gitlab-ci.yml file in GitLab?
+- What are GitLab pipelines, and how are they structured?
+- How do you secure sensitive data (like API keys) in GitLab CI/CD?
+- Explain the difference between a public and private GitLab project.
+- What are GitLab variables, and how can you use them?
+- How do you trigger a pipeline manually in GitLab?
+- What is a GitLab Group, and how is it different from a Project?
+- How do you create and protect a branch in GitLab?
+- How can you roll back a deployment in GitLab CI/CD?
+- What are GitLab webhooks, and how do they work?
+- Explain GitLab Merge Request approval rules.
+- How can you restrict access to a specific branch in GitLab?
+- What is the purpose of GitLab artifacts in a CI/CD pipeline?
+- How do you set up a GitLab Issue Board?
+- How do you use GitLab Pages to host a static website?
+- What is the difference between needs and dependencies in GitLab CI/CD?
+- How do you set up a scheduled pipeline in GitLab?
+- What is the use of the Auto DevOps feature in GitLab?
