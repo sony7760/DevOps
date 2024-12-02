@@ -1,0 +1,20 @@
+- What is the difference between git reset, git revert, and git checkout?
+- Explain the difference between git pull and git fetch.
+- How can you rename an existing branch in Git?
+- How do you handle merge conflicts in Git?
+- What is a detached HEAD state in Git, and how do you fix it?
+- How do you stash changes and later apply them to another branch?
+- What is the difference between git merge and git rebase?
+- Explain the use of the git cherry-pick command.
+- How can you undo the last commit but keep the changes in the working directory?
+- How do you list all branches (both local and remote) in a repository?
+- What is a Git tag, and how does it differ from a branch?
+- How do you compare two commits in Git?
+- What is the purpose of the .gitkeep file?
+- How do you remove a file from a Git repository without deleting it from the working directory?
+- How do you squash multiple commits into one?
+- How can you see who modified a particular line in a file and when?
+- How do you clone only a specific branch from a remote repository?
+- What is the difference between git archive and git bundle?
+- How can you delete a remote branch in Git?
+- What is the difference between git diff HEAD and git diff --cached?
