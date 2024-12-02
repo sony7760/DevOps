@@ -1,7 +1,3 @@
-Here are the questions and answers in **Markdown format**:
-
----
-
 ## Questions and Answers
 
 ### 1. **Difference between `git reset`, `git revert`, and `git checkout`:**
